@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SunFlower : MonoBehaviour
+public class SunFlower : PlantBase
 {
     //this script is for creating sun from sunflower, like skysunmanager script
     void Start()
@@ -10,15 +10,15 @@ public class SunFlower : MonoBehaviour
         InvokeRepeating("CreateSun", 3, 3);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void CreateSun()
     {
-        Sun sun = GameObject.Instantiate(GameManager.Instance.GameConf.SunPrefab, transform.position,Quaternion.identity, transform).GetComponent<Sun>();
+        CreateSun(SunTypeEnum.Normal);
+    }
+    public override void CreateSun(SunTypeEnum sunType=SunTypeEnum.Normal)
+    {
+        Sun sun = GameObject.Instantiate(SunManager.Instance.GetSunPrefabByType(sunType), transform.position, Quaternion.identity, transform).GetComponent<Sun>();
         sun.JumpAnimationFromFlower();
     }
+
+
 }

@@ -6,4 +6,6 @@ public class Grid
 {
     public bool IsPlanted { get; set; }
     public Vector3 PointPos { get; set; }
+
+    public PlantBase plant;
 }

@@ -60,16 +60,22 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.50f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Managers\SunManager.cs" />
     <Compile Include="Assets\Scripts\Plant\Sun.cs" />
+    <Compile Include="Assets\Scripts\Managers\PlantManager.cs" />
+    <Compile Include="Assets\Scripts\Conf\SunType.cs" />
+    <Compile Include="Assets\Scripts\Utils\Utils.cs" />
     <Compile Include="Assets\Scripts\Grid.cs" />
-    <Compile Include="Assets\Scripts\PlayerManager.cs" />
-    <Compile Include="Assets\Scripts\GridManager.cs" />
-    <Compile Include="Assets\Scripts\Plant\SkySunManager.cs" />
-    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Plant\PlantBase.cs" />
+    <Compile Include="Assets\Scripts\Conf\PlantType.cs" />
+    <Compile Include="Assets\Scripts\Plant\SunFromSky.cs" />
+    <Compile Include="Assets\Scripts\Managers\GridManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\PlayerManager.cs" />
     <Compile Include="Assets\Scripts\Plant\SunFlower.cs" />
     <Compile Include="Assets\Scripts\Conf\GameConf.cs" />
+    <Compile Include="Assets\Scripts\Managers\UIManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
     <Compile Include="Assets\Scripts\UI\UIPlantCard.cs" />
-    <Compile Include="Assets\Scripts\UIManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
