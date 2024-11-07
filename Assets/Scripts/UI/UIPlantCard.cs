@@ -4,16 +4,16 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class UIPlantCard : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler,IPointerClickHandler
+public class UIPlantCard : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler,IObserver
 {
+    //private Image cardIcon;
     private Image maskImg;
 
     [SerializeField]private float CDDuration = 3f;
+    [SerializeField]private PlantTypeEnum currentPlantType;
     private float currentTime = 0;
 
     private bool isReady = false;
-
-
     public bool IsReady {  get { return isReady; }
         set
         {
@@ -33,10 +33,27 @@ public class UIPlantCard : MonoBehaviour,IPointerEnterHandler,IPointerExitHandle
 
     private void Start()
     {
+        //cardIcon = GetComponent<Image>();
+      
         maskImg=transform.Find("Mask").GetComponent<Image>();
         maskImg.fillAmount = 1;
         IsReady = false;
     }
+
+    private void Update()
+    {
+  
+    }
+
+    private void OnEnable()
+    {
+        NotificationCenter.Instance.RegisterObserver(this);
+    }
+    private void OnDisable()
+    {
+        NotificationCenter.Instance.UnregisterObserver(this);
+    }
+
     private void StartCD(float duration)
     {
         StartCoroutine(StartCDCoroutine( duration));
@@ -68,13 +85,24 @@ public class UIPlantCard : MonoBehaviour,IPointerEnterHandler,IPointerExitHandle
 
     private void OnMouseDown()
     {
-        //if use this method need to add a boxcollider to this card
-        if (!isReady) return;
-        Debug.Log(11);
+        if (Input.GetMouseButtonDown(0))
+        {
+            SelectPlant();
+        }
+    }
+    public void SelectPlant()
+    {
+        if (!isReady || MouseManager.Instance.currentPlantType!=PlantTypeEnum.None) return;
+        //change the state of mouse manager
+        MouseManager.Instance.SetMouseSelected(currentPlantType);
     }
 
-    public void OnPointerClick(PointerEventData eventData)
+    public void OnDataChanged(Event_Type type, object eventData = null)
     {
-        Debug.Log(222);
+        //todo refresh the card cd
+        if (type == Event_Type.Planting_Event && (PlantTypeEnum)eventData==PlantTypeEnum.SunFlower)
+        {
+            IsReady = false;
+        }
     }
 }

@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Sun : MonoBehaviour
 {
+    [SerializeField] private float fallingSpeed = 5.0f;
+    [SerializeField] private float jumpUpSpeed = 10.0f;
+    [SerializeField] private float jumpDownSpeed = -2.5f;
+    [SerializeField] private float flyingSpeed = 10f;
     private float landingPosY;
     private Coroutine countdownCoroutine;
 
@@ -12,7 +16,6 @@ public class Sun : MonoBehaviour
         //actually I believe we should destory the clicked sun and create a new one, create a new one first, then destory the old one
         //TODO: generate a new one and destory the clicked one
         Vector3 targetScreenPos = UIManager.Instance.GetSunTMPScreenPos();
-        //targetScreenPos.z = Camera.main.WorldToScreenPoint(transform.position).z;
         if (countdownCoroutine != null)
         {
             StopCoroutine(countdownCoroutine);
@@ -39,8 +42,8 @@ public class Sun : MonoBehaviour
     {
         while (transform.position.y > landingPosY)
         {
-            transform.Translate(10f*Vector3.down * Time.deltaTime);
-            yield return new WaitForSeconds(0.01f);
+            transform.Translate( fallingSpeed * Vector3.down * Time.deltaTime);
+            yield return new WaitForSeconds(0.005f);
         }
         countdownCoroutine =StartCoroutine(DestoryCountDown(5f));
 
@@ -61,13 +64,13 @@ public class Sun : MonoBehaviour
     private IEnumerator JumpAnim()
     {
         float speedX = Random.Range(-3f, 3f);
-        float speedY = 10f;
+        float speedY = jumpUpSpeed;
         float startY = transform.position.y;
         while (transform.position.y >= startY)
         {
             if(transform.position.y>= startY + jumpMaxY)
             {
-                speedY = -2.5f;
+                speedY = jumpDownSpeed;
             }
 
             transform.Translate(new Vector3(speedX*Time.deltaTime, speedY* Time.deltaTime, 0));
@@ -91,15 +94,14 @@ public class Sun : MonoBehaviour
     {
         //get the dirction of destination
         Vector3 screenStartPos = Camera.main.WorldToScreenPoint(transform.position);
-        float speed = 2500f;
 
         // Ensure destination position includes correct Z depth
         //destinationPos.z = screenStartPos.z;
 
         while (Vector3.Distance(destinationPos, screenStartPos) > 0.1f)
         {
-            yield return new WaitForSeconds(0.01f);
-            screenStartPos = Vector3.MoveTowards(screenStartPos, destinationPos, speed * Time.deltaTime);
+            yield return new WaitForSeconds(0.005f);
+            screenStartPos = Vector3.MoveTowards(screenStartPos, destinationPos, flyingSpeed);
 
             transform.position = Camera.main.ScreenToWorldPoint(screenStartPos);
         }

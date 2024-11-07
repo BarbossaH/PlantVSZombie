@@ -62,20 +62,29 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Managers\SunManager.cs" />
     <Compile Include="Assets\Scripts\Plant\Sun.cs" />
+    <Compile Include="Assets\Scripts\Managers\MouseManager.cs" />
     <Compile Include="Assets\Scripts\Managers\PlantManager.cs" />
     <Compile Include="Assets\Scripts\Conf\SunType.cs" />
     <Compile Include="Assets\Scripts\Utils\Utils.cs" />
     <Compile Include="Assets\Scripts\Grid.cs" />
     <Compile Include="Assets\Scripts\Plant\PlantBase.cs" />
+    <Compile Include="Assets\Scripts\Managers\SingletonMono.cs" />
     <Compile Include="Assets\Scripts\Conf\PlantType.cs" />
     <Compile Include="Assets\Scripts\Plant\SunFromSky.cs" />
+    <Compile Include="Assets\Scripts\Conf\EventType.cs" />
+    <Compile Include="Assets\Scripts\Data\Sun_SO.cs" />
+    <Compile Include="Assets\Scripts\Conf\SortingOrder.cs" />
     <Compile Include="Assets\Scripts\Managers\GridManager.cs" />
     <Compile Include="Assets\Scripts\Managers\PlayerManager.cs" />
     <Compile Include="Assets\Scripts\Plant\SunFlower.cs" />
-    <Compile Include="Assets\Scripts\Conf\GameConf.cs" />
     <Compile Include="Assets\Scripts\Managers\UIManager.cs" />
+    <Compile Include="Assets\Scripts\Interface\IObserver.cs" />
     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Managers\PlantingManager.cs" />
     <Compile Include="Assets\Scripts\UI\UIPlantCard.cs" />
+    <Compile Include="Assets\Scripts\Plant\Peashooter.cs" />
+    <Compile Include="Assets\Scripts\Data\Plant_SO.cs" />
+    <Compile Include="Assets\Scripts\Managers\NotificationCenter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
