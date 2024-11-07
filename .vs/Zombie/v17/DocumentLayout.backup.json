@@ -3,44 +3,48 @@
   "WorkspaceRootPath": "D:\\UnityProjects\\Zombie\\Zombie\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|d:\\unityprojects\\zombie\\zombie\\assets\\scripts\\interface\\iobserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interface\\iobserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|D:\\UnityProjects\\Zombie\\Zombie\\assets\\scripts\\managers\\plantingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\plantingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|d:\\unityprojects\\zombie\\zombie\\assets\\scripts\\conf\\eventtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\conf\\eventtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|d:\\unityprojects\\zombie\\zombie\\assets\\scripts\\ui\\uiplantcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|D:\\UnityProjects\\Zombie\\Zombie\\assets\\scripts\\ui\\uiplantcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\uiplantcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|D:\\UnityProjects\\Zombie\\Zombie\\assets\\scripts\\managers\\plantingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\plantingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|d:\\unityprojects\\zombie\\zombie\\assets\\scripts\\managers\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|d:\\unityprojects\\zombie\\zombie\\assets\\scripts\\managers\\plantmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\plantmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|D:\\UnityProjects\\Zombie\\Zombie\\assets\\scripts\\plant\\sunfromsky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\plant\\sunfromsky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|d:\\unityprojects\\zombie\\zombie\\assets\\scripts\\plant\\sun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\plant\\sun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|D:\\UnityProjects\\Zombie\\Zombie\\assets\\scripts\\plant\\sunflower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\plant\\sunflower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|D:\\UnityProjects\\Zombie\\Zombie\\assets\\scripts\\plant\\sun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\plant\\sun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|D:\\UnityProjects\\Zombie\\Zombie\\assets\\scripts\\plant\\plantbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\plant\\plantbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|D:\\UnityProjects\\Zombie\\Zombie\\assets\\scripts\\managers\\gridmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\gridmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|D:\\UnityProjects\\Zombie\\Zombie\\assets\\scripts\\managers\\mousemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\mousemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|d:\\unityprojects\\zombie\\zombie\\assets\\scripts\\managers\\sunmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\sunmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|d:\\unityprojects\\zombie\\zombie\\assets\\scripts\\interface\\iobserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interface\\iobserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|d:\\unityprojects\\zombie\\zombie\\assets\\scripts\\managers\\notificationcenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\notificationcenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|D:\\UnityProjects\\Zombie\\Zombie\\assets\\scripts\\grid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,11 +58,128 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PlantManager.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Managers\\PlantManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\PlantManager.cs",
+              "ToolTip": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Managers\\PlantManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Managers\\PlantManager.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T08:25:20.306Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Sun.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Plant\\Sun.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Plant\\Sun.cs",
+              "ToolTip": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Plant\\Sun.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Plant\\Sun.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAowFAAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T05:32:53.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SunManager.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Managers\\SunManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\SunManager.cs",
+              "ToolTip": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Managers\\SunManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Managers\\SunManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T03:48:07.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UIManager.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Managers\\UIManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\UIManager.cs",
+              "ToolTip": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Managers\\UIManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Managers\\UIManager.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T03:46:22.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SunFlower.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Plant\\SunFlower.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Plant\\SunFlower.cs",
+              "ToolTip": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Plant\\SunFlower.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Plant\\SunFlower.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAywA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T21:06:52.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "PlantingManager.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Managers\\PlantingManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\PlantingManager.cs",
+              "ToolTip": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Managers\\PlantingManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Managers\\PlantingManager.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAArwEYAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T11:48:59.304Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UIPlantCard.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\UI\\UIPlantCard.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\UIPlantCard.cs",
+              "ToolTip": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\UI\\UIPlantCard.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\UIPlantCard.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAIwGAAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T11:26:11.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MouseManager.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Managers\\MouseManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\MouseManager.cs",
+              "ToolTip": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Managers\\MouseManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Managers\\MouseManager.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAewBMAAACDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T11:24:33.321Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SunFromSky.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Plant\\SunFromSky.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Plant\\SunFromSky.cs",
+              "ToolTip": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Plant\\SunFromSky.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Plant\\SunFromSky.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T12:34:21.964Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "IObserver.cs",
               "DocumentMoniker": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Interface\\IObserver.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Interface\\IObserver.cs",
@@ -71,68 +192,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EventType.cs",
-              "DocumentMoniker": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Conf\\EventType.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Conf\\EventType.cs",
-              "ToolTip": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Conf\\EventType.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Conf\\EventType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAXAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "NotificationCenter.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Managers\\NotificationCenter.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\NotificationCenter.cs",
+              "ToolTip": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Managers\\NotificationCenter.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Managers\\NotificationCenter.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T02:44:39.406Z",
+              "WhenOpened": "2024-11-07T02:51:14.739Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PlantBase.cs",
-              "DocumentMoniker": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Plant\\PlantBase.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Plant\\PlantBase.cs",
-              "ToolTip": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Plant\\PlantBase.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Plant\\PlantBase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAcAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T21:12:31.025Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SunFlower.cs",
-              "DocumentMoniker": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Plant\\SunFlower.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Plant\\SunFlower.cs",
-              "ToolTip": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Plant\\SunFlower.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Plant\\SunFlower.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAowBgAAACgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T21:06:52.568Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Sun.cs",
-              "DocumentMoniker": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Plant\\Sun.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Plant\\Sun.cs",
-              "ToolTip": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Plant\\Sun.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Plant\\Sun.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAIAwwC8AAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T20:38:03.81Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SunFromSky.cs",
-              "DocumentMoniker": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Plant\\SunFromSky.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Plant\\SunFromSky.cs",
-              "ToolTip": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Plant\\SunFromSky.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Plant\\SunFromSky.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAYwB4AAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T12:34:21.964Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Grid.cs",
               "DocumentMoniker": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Grid.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Grid.cs",
@@ -141,55 +214,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-06T12:24:47.786Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PlantingManager.cs",
-              "DocumentMoniker": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Managers\\PlantingManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\PlantingManager.cs",
-              "ToolTip": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Managers\\PlantingManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Managers\\PlantingManager.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAowDAAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T11:48:59.304Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UIPlantCard.cs",
-              "DocumentMoniker": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\UI\\UIPlantCard.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\UIPlantCard.cs",
-              "ToolTip": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\UI\\UIPlantCard.cs",
-              "RelativeToolTip": "Assets\\Scripts\\UI\\UIPlantCard.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAewA8AAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T11:26:11.946Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MouseManager.cs",
-              "DocumentMoniker": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Managers\\MouseManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\MouseManager.cs",
-              "ToolTip": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Managers\\MouseManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Managers\\MouseManager.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAywBAAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T11:24:33.321Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "GridManager.cs",
-              "DocumentMoniker": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Managers\\GridManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\GridManager.cs",
-              "ToolTip": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Managers\\GridManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Managers\\GridManager.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAIwCUAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T11:18:44.971Z"
             }
           ]
         }
