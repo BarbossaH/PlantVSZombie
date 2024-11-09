@@ -1,30 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public abstract class PlantBase : MonoBehaviour
+namespace Plant
 {
-    protected Animator anim;
-    protected SpriteRenderer render;
+    using UnityEngine;
 
-    protected virtual void Awake()
+    public abstract class PlantBase : MonoBehaviour
     {
-        render = GetComponent<SpriteRenderer>();
-        anim = GetComponent<Animator>();
-        anim.speed = 0;
-    }
+        protected Animator anim;
+        protected SpriteRenderer render;
 
-    public virtual void ShowPlant( float alpha=1)
-    {
-        render.color = new Color(1, 1, 1, alpha);
-    }
+        protected virtual void Awake()
+        {
+            render = GetComponent<SpriteRenderer>();
+            anim = GetComponent<Animator>();
+            anim.speed = 0;
+        }
 
-    public virtual void Plant()
-    {
-        ShowPlant();
-        anim.speed = 1;
-        Invoke("ActivatePlantFunction",0f);
+        public virtual void ShowPlant(float alpha = 1)
+        {
+            render.color = new Color(1, 1, 1, alpha);
+        }
 
+        public virtual void Plant()
+        {
+            ShowPlant();
+            anim.speed = 1;
+            Invoke("ActivatePlantFunction", 0f);
+
+        }
+
+        public abstract void ActivatePlantFunction();
     }
-    public abstract void ActivatePlantFunction();
 }

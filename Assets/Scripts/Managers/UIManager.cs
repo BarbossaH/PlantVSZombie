@@ -1,45 +1,39 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-using UnityEngine;
-
-public class UIManager : MonoBehaviour
+namespace Managers
 {
-    public static UIManager Instance;
 
-   private TextMeshProUGUI sunAmountTMP;
+    using TMPro;
+    using UnityEngine;
 
-    private void Awake()
+    public class UIManager : MonoBehaviour
     {
-        Instance = this;
-        sunAmountTMP = transform.Find("MainPanel/SunAmount").GetComponent<TextMeshProUGUI>();
-    }
-    void Start()
-    {
-        //
-    }
+        public static UIManager Instance;
 
-    void Update()
-    {
-        
-    }
+        private TextMeshProUGUI sunAmountTMP;
 
-    public void UpdateSunAmount(int amount)
-    {
-        sunAmountTMP.text = amount.ToString();
-    }
-
-    public Vector3 GetSunTMPScreenPos()
-    {
-        Vector3 screenPos;
-        // Get the world coordinates of the sunAmountTMP
-        Vector3 worldPos = sunAmountTMP.transform.position;
+        private void Awake()
+        {
+            Instance = this;
+            sunAmountTMP = transform.Find("MainPanel/SunAmount").GetComponent<TextMeshProUGUI>();
+        }
 
 
-        //Convert the world coordinates to screen coordinates
-       screenPos = Camera.main.WorldToScreenPoint(worldPos);
-        //Debug.Log(screenPos);
-        screenPos.y += 90f;
-        return screenPos;
+        public void UpdateSunAmount(int amount)
+        {
+            sunAmountTMP.text = amount.ToString();
+        }
+
+        public Vector3 GetSunTMPScreenPos()
+        {
+            Vector3 screenPos;
+            // Get the world coordinates of the sunAmountTMP
+            Vector3 worldPos = sunAmountTMP.transform.position;
+
+
+            //Convert the world coordinates to screen coordinates
+            screenPos = Camera.main.WorldToScreenPoint(worldPos);
+            //Debug.Log(screenPos);
+            screenPos.y += 90f;
+            return screenPos;
+        }
     }
 }

@@ -1,86 +1,109 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class PlantingManager : SingletonMono<PlantingManager>
+namespace Managers
 {
-    // for planting and previewing the plant selected  
+    using Grid;
+    using Plant;
+    using UnityEngine;
+    using UnityEngine.EventSystems;
 
-    //private GameObject plantInGrid;
-    private Grid currentGrid;
-    //get the right grid from grid manager ( grid is not null and not planted ),preveiw the plant
-    private void Update()
+    public class PlantingManager : SingletonMono<PlantingManager>
     {
-        SetCurrentGrid();
-        PreviewPlant();
-        if (Input.GetMouseButtonDown(0))
+        // for planting and previewing the plant selected  
+
+        //private GameObject plantInGrid;
+        private LogicGrid currentGrid;
+
+        //get the right grid from grid manager ( grid is not null and not planted ),preview the plant
+        private void Update()
         {
-            //plant a plant
-            Plant();
-            //notify ui refresh
-        }
-        else if (Input.GetMouseButtonDown(1)) {
-            //cancel previewplant
-            CancelPreviewPlant();
-        }
-    }
-
-    private void Plant()
-    {
-        if (currentGrid != null&& currentGrid.plant!=null)
-        {
-            Debug.Log(1234);
-            currentGrid.plant.GetComponent<PlantBase>().Plant();
-            currentGrid.IsPlanted = true;
-            currentGrid = null;
-            MouseManager.Instance.CancelSelected();
-            NotificationCenter.Instance.NotifyObserver(Event_Type.Planting_Event, PlantTypeEnum.SunFlower);
-        }
-    }
-
-    private void SetCurrentGrid()
-    {
-        if (MouseManager.Instance.currentPlantType == PlantTypeEnum.None) return;
-        Grid grid = GridManager.Instance.GetGridByMouse();
-        if (grid != null ) { 
-            if( grid != currentGrid)
+            SetCurrentGrid();
+            PreviewPlant();
+            if (Input.GetMouseButtonDown(0))
             {
-                //if mouse move to the next grid, the currentgrid preview plant should be destoried
+                //plant a plant
+                if (IsPointerOverUI()) return;
+                Plant();
+            }
+            else if (Input.GetMouseButtonDown(1))
+            {
+                //cancel preview plant
                 CancelPreviewPlant();
-                currentGrid = grid;
-            }           
+            }
         }
-        else
+
+        //check pointer is on the ui or not to prevent the click event pass through ui
+        private bool IsPointerOverUI()
         {
-            //if the moust move too far, like at the edge of the screen
-            CancelPreviewPlant();
-            currentGrid = null;
+            return EventSystem.current.IsPointerOverGameObject();
         }
-    }
-   private void PreviewPlant() 
-   {
-        if (currentGrid != null )
+
+        private void Plant()
         {
-            if (currentGrid.IsPlanted) return;
-            //show the preview of the plant in the grid
-            if (currentGrid.plant == null)
+            if (currentGrid != null && currentGrid.Plant != null && !currentGrid.IsPlanted)
             {
-                GameObject prefab = PlantManager.Instance.GetPlantPrefbByType(MouseManager.Instance.currentPlantType);
-                if (prefab != null) {
-                    currentGrid.plant = GameObject.Instantiate(prefab, currentGrid.PointWorldPos, Quaternion.identity, PlantManager.Instance.transform);
-                    currentGrid.plant.GetComponent<PlantBase>().ShowPlant(0.6f);
-                    currentGrid.plant.GetComponent<SpriteRenderer>().sortingOrder = 0;
+                currentGrid.Plant.GetComponent<PlantBase>().Plant();
+                currentGrid.IsPlanted = true;
+                //GridManager.Instance.SetGridData(currentGrid.plant);
+                //notify observers, like ui
+                NotificationCenter.Instance.NotifyObserver(Event_Type.Planting_Event,
+                    MouseManager.Instance.currentPlantType);
+
+
+                currentGrid = null;
+                //change mouse state
+                MouseManager.Instance.CancelSelected();
+            }
+        }
+
+        private void SetCurrentGrid()
+        {
+            if (MouseManager.Instance.currentPlantType == PlantTypeEnum.None) return;
+            LogicGrid grid = GridManager.Instance.GetGridByMouse();
+            if (grid != null)
+            {
+                if (grid != currentGrid)
+                {
+                    //if mouse move to the next grid, the current grid preview plant should be destroyed
+                    CancelPreviewPlant();
+                    currentGrid = grid;
+                }
+            }
+            else
+            {
+                //if the mouse move too far, like at the edge of the screen
+                CancelPreviewPlant();
+                currentGrid = null;
+            }
+        }
+
+        private void PreviewPlant()
+        {
+            if (currentGrid != null)
+            {
+                if (currentGrid.IsPlanted) return;
+                //show the preview of the plant in the grid
+                if (currentGrid.Plant == null)
+                {
+                    GameObject prefab =
+                        PlantManager.Instance.GetPlantPrefabByType(MouseManager.Instance.currentPlantType);
+                    if (prefab != null)
+                    {
+                        currentGrid.Plant = GameObject.Instantiate(prefab, currentGrid.PointWorldPos,
+                            Quaternion.identity, PlantManager.Instance.transform);
+                        currentGrid.Plant.GetComponent<PlantBase>().ShowPlant(0.6f);
+                        currentGrid.Plant.GetComponent<SpriteRenderer>().sortingOrder = 0;
+                    }
                 }
             }
         }
-    }
 
-    private void CancelPreviewPlant()
-    {
-        if (currentGrid != null && !currentGrid.IsPlanted)
+        private void CancelPreviewPlant()
         {
-            Destroy(currentGrid.plant);
+            // if (currentGrid != null && !currentGrid.IsPlanted)
+            if(currentGrid is {IsPlanted: false})
+            {
+                Destroy(currentGrid.Plant);
+            }
         }
-    }
 
+    }
 }

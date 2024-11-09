@@ -1,5 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+namespace Managers
+{
+
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -12,8 +13,9 @@ public class GameManager : MonoBehaviour
     {
         Instance = this;
     }
-    void Start()
-    {
-    }
+
 
 }
+
+}
+

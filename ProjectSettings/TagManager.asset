@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Zombie
   layers:
   - Default
   - TransparentFX
@@ -11,7 +12,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Zombie
   - 
   - 
   - 
@@ -46,6 +47,9 @@ TagManager:
     locked: 0
   - name: Plant
     uniqueID: 2411043463
+    locked: 0
+  - name: Zombie
+    uniqueID: 3951240725
     locked: 0
   - name: Sun
     uniqueID: 1823249387

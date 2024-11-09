@@ -1,26 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class PlayerManager : SingletonMono<PlayerManager>
+namespace Managers
 {
-    private int sunAmount;
-    public int SunAmount
+    public class PlayerManager : SingletonMono<PlayerManager>
     {
-        get { return sunAmount; }
-        set
+        private int sunAmount;
+
+        public int SunAmount
         {
-            sunAmount = value;
-            UIManager.Instance.UpdateSunAmount(sunAmount);
+            get { return sunAmount; }
+            set
+            {
+                sunAmount = value;
+                UIManager.Instance.UpdateSunAmount(sunAmount);
+            }
+
         }
 
-    }
-    private void Awake()
-    {
-        Instance = this;
-    }
-    private void Start()
-    {
-        SunAmount = 100;
+        private void Awake()
+        {
+            Instance = this;
+        }
+
+        private void Start()
+        {
+            SunAmount = 100;
+        }
     }
 }

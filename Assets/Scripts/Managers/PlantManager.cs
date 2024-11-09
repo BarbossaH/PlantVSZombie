@@ -1,30 +1,35 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class PlantManager : SingletonMono<PlantManager>
+namespace Managers
 {
-    //this class is for managing the data of all plants, via this class, I can get any plants I want due to the plant type
-    private Dictionary<PlantTypeEnum, GameObject> PlantDic = new Dictionary<PlantTypeEnum, GameObject>();
+    using System.Collections.Generic;
+    using UnityEngine;
 
-    protected override void Init()
+    public class PlantManager : SingletonMono<PlantManager>
     {
-        PlantListSO plantListSO = Resources.Load<PlantListSO>("PlantListSO");
-        if (plantListSO == null)
-        {
-            Debug.LogError("PlantSO asset not found in Resources. Please ensure it exists in a Resources folder.");
-            return;
-        }
-        List<PlantData> plantList = plantListSO.plantsList;
+        //this class is for managing the data of all plants, via this class, I can get any plants I want due to the plant type
+        private readonly Dictionary<PlantTypeEnum, GameObject> plantDic = new Dictionary<PlantTypeEnum, GameObject>();
 
-        foreach (var item in plantList)
+        protected override void Init()
         {
-            PlantDic.Add(item.PlantType, item.PlantPrefab);
+            PlantListSO plantListSO = Resources.Load<PlantListSO>("PlantListSO");
+            if (plantListSO == null)
+            {
+                Debug.LogError("PlantSO asset not found in Resources. Please ensure it exists in a Resources folder.");
+                return;
+            }
+
+            List<PlantData> plantList = plantListSO.plantsList;
+
+            foreach (var item in plantList)
+            {
+                plantDic.Add(item.PlantType, item.PlantPrefab);
+            }
         }
-    }
-    public GameObject GetPlantPrefbByType(PlantTypeEnum plantType)
-    {
-        if(PlantDic.ContainsKey(plantType)) return PlantDic[plantType];
-        return null;
+
+        public GameObject GetPlantPrefabByType(PlantTypeEnum plantType)
+        {
+            plantDic.TryGetValue(plantType, out GameObject plant);
+            // if (plantDic.ContainsKey(plantType)) return plantDic[plantType];
+            return plant;
+        }
     }
 }

@@ -1,22 +1,27 @@
-using UnityEngine;
-
-public class SingletonMono<T> : MonoBehaviour where T : SingletonMono<T>
+namespace Managers
 {
-    public static T Instance;
+    using UnityEngine;
 
-    private void Awake()
+    public class SingletonMono<T> : MonoBehaviour where T : SingletonMono<T>
     {
-        if (Instance == null)
+        public static T Instance;
+
+        private void Awake()
         {
-            Instance = (T)this;
-            DontDestroyOnLoad(gameObject);
-            Init();
+            if (Instance == null)
+            {
+                Instance = this as T;
+                DontDestroyOnLoad(gameObject);
+                Init();
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
-        else
+
+        protected virtual void Init()
         {
-            Destroy(gameObject);
         }
     }
-
-    protected virtual void Init() { }
 }

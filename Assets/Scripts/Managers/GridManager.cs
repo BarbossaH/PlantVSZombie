@@ -1,65 +1,96 @@
-using System.Collections.Generic;
-using UnityEngine;
-
-public class GridManager : SingletonMono<GridManager>
+namespace Managers
 {
-    /*to preset a list to store the position of each grid, and when the moust click the screen, then campare to each grid and find the nearest
-    grid at the selected grid, and then put a plant on this position
-     */
+    using System.Collections.Generic;
+    using UnityEngine;
+    using Grid;
 
-    private List<Grid> gridsPos = new List<Grid>();
-    private void Start()
+    public enum GridRowEnum
     {
-        GenerateGridPos();
+        FirstRow = 0,
+        SecondRow,
+        ThirdRow,
+        ForthRow,
+        FifthRow
     }
 
-    //private void OnMouseDown()
-    //{
-    //    Plant();
-    //}
-     public void SetGridata(GameObject plant)
+    public enum GridColEnum
     {
-        Grid grid = GetGridByMouse();
-        grid.plant = plant;
-        grid.IsPlanted = true; 
+        FirstCol = 0,
+        SecondCol,
+        ThirdCol,
+        ForthCol,
+        FifthCol,
+        SixthCol,
+        SeventhCol,
+        EighthCol,
+        NinethCol
     }
 
-    public Grid GetGridByMouse()
+    public class GridManager : SingletonMono<GridManager>
     {
-        Vector2 mousePos = Input.mousePosition;
-        Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
-        Grid gird = GetGridByWorldCoordinate(worldPos);
-        return gird;
-    }
+        /*to preset a list to store the position of each grid, and when the moust click the screen, then campare to each grid and find the nearest
+        grid at the selected grid, and then put a plant on this position
+         */
 
-    public Grid GetGridByWorldCoordinate(Vector3 worldPos)
-    {
-        worldPos.z = 0;
-        float distance = 1.0f; //because the width and height is close to 1.5f, so if the moust is out of this range, it could return null
-        int index = -1;
-        for (int i = 0; i < gridsPos.Count; i++)
+        private readonly List<LogicGrid> gridsPos = new List<LogicGrid>();
+
+        private void Start()
         {
-            float tempDis = Vector3.Distance(gridsPos[i].PointWorldPos, worldPos);
-            if (tempDis < distance)
-            {
-                distance = tempDis;
-                index = i;
-            }
+            GenerateGridPos();
         }
-        return index != -1 ? gridsPos[index] : null;
-    }
 
-    private void GenerateGridPos()
-    {
-        for (int col = 0; col < 9; col++)
+        public void SetGridata(GameObject plant)
         {
-            for (int row = 0; row < 5; row++)
+            LogicGrid grid = GetGridByMouse();
+            grid.Plant = plant;
+            grid.IsPlanted = true;
+        }
+
+        public LogicGrid GetGridByRowIndex(GridRowEnum rowIndex)
+        {
+            return gridsPos[(int)rowIndex * 9];
+        }
+
+        public LogicGrid GetGridByMouse()
+        {
+            Vector2 mousePos = Input.mousePosition;
+            Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
+            LogicGrid grid = GetGridByWorldCoordinate(worldPos);
+            return grid;
+        }
+
+        public LogicGrid GetGridByWorldCoordinate(Vector3 worldPos)
+        {
+            worldPos.z = 0;
+            float
+                distance = 1.0f; //because the width and height is close to 1.5f, so if the moust is out of this range, it could return null
+            int index = -1;
+            for (int i = 0; i < gridsPos.Count; i++)
             {
-                Grid grid = new Grid();
-                grid.IsPlanted = false;
-                grid.plant = null;
-                grid.PointWorldPos = new Vector2(-7f + (col * 1.4f), -3.75f + (row * 1.7f));
-                gridsPos.Add(grid);
+                float tempDis = Vector3.Distance(gridsPos[i].PointWorldPos, worldPos);
+                if (tempDis < distance)
+                {
+                    distance = tempDis;
+                    index = i;
+                }
+            }
+
+            //Debug.Log(index);
+            return index != -1 ? gridsPos[index] : null;
+        }
+
+        private void GenerateGridPos()
+        {
+            for (int col = 0; col < 9; col++)
+            {
+                for (int row = 0; row < 5; row++)
+                {
+                    LogicGrid grid = new LogicGrid();
+                    grid.IsPlanted = false;
+                    grid.Plant = null;
+                    grid.PointWorldPos = new Vector2(-7f + (col * 1.4f), -3.75f + (row * 1.7f));
+                    gridsPos.Add(grid);
+                }
             }
         }
     }
