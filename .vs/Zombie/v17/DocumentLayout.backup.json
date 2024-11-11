@@ -7,20 +7,20 @@
       "RelativeMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\fsm\\fsmstatebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|D:\\UnityProjects\\Zombie\\Zombie\\assets\\scripts\\fsm\\fsmtriggerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\fsm\\fsmtriggerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|D:\\UnityProjects\\Zombie\\Zombie\\assets\\scripts\\fsm\\fsmbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\fsm\\fsmbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|d:\\unityprojects\\zombie\\zombie\\assets\\scripts\\fsm\\fsmtriggerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\fsm\\fsmtriggerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|D:\\UnityProjects\\Zombie\\Zombie\\assets\\scripts\\fsm\\common\\fsmtriggerid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\fsm\\common\\fsmtriggerid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|D:\\UnityProjects\\Zombie\\Zombie\\assets\\scripts\\fsm\\common\\fsmstateid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\fsm\\common\\fsmstateid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|D:\\UnityProjects\\Zombie\\Zombie\\assets\\scripts\\fsm\\common\\fsmtriggerid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\fsm\\common\\fsmtriggerid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|D:\\UnityProjects\\Zombie\\Zombie\\assets\\scripts\\zombies\\normalzombie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -60,27 +60,27 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\FSM\\FSMStateBase.cs",
               "ToolTip": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\FSM\\FSMStateBase.cs",
               "RelativeToolTip": "Assets\\Scripts\\FSM\\FSMStateBase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAywBwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-08T21:07:17.274Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "FSMBase.cs",
               "DocumentMoniker": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\FSM\\FSMBase.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FSM\\FSMBase.cs",
               "ToolTip": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\FSM\\FSMBase.cs",
               "RelativeToolTip": "Assets\\Scripts\\FSM\\FSMBase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-08T21:07:00.45Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "FSMTriggerBase.cs",
               "DocumentMoniker": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\FSM\\FSMTriggerBase.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FSM\\FSMTriggerBase.cs",
@@ -93,7 +93,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "FSMTriggerID.cs",
               "DocumentMoniker": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\FSM\\Common\\FSMTriggerID.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FSM\\Common\\FSMTriggerID.cs",
@@ -101,11 +101,12 @@
               "RelativeToolTip": "Assets\\Scripts\\FSM\\Common\\FSMTriggerID.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T21:02:48.091Z"
+              "WhenOpened": "2024-11-08T21:02:48.091Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "FSMStateID.cs",
               "DocumentMoniker": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\FSM\\Common\\FSMStateID.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FSM\\Common\\FSMStateID.cs",

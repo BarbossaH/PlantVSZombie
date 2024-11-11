@@ -1,7 +1,10 @@
 
-public enum PlantTypeEnum
+namespace Conf
 {
-    None = 0,
-    SunFlower,
-    Pea,
+    public enum PlantTypeEnum
+    {
+        None = 0,
+        SunFlower,
+        Pea,
+    }
 }

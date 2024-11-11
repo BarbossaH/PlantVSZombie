@@ -1,7 +1,10 @@
-public enum SunTypeEnum
+namespace Conf
 {
-    None = 0,
-    Samll,
-    Normal,
-    Large
+    public enum SunTypeEnum
+    {
+        None = 0,
+        Samll,
+        Normal,
+        Large
+    }
 }

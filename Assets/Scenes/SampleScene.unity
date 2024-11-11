@@ -305,7 +305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 348cd7ff5e6e2274abf0b476fb85af05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CDDuration: 5
+  cdDuration: 3
   currentPlantType: 2
 --- !u!114 &13446462
 MonoBehaviour:
@@ -1072,7 +1072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 348cd7ff5e6e2274abf0b476fb85af05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CDDuration: 5
+  cdDuration: 3
   currentPlantType: 1
 --- !u!61 &454554810
 BoxCollider2D:
@@ -2176,6 +2176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1282657696}
   - component: {fileID: 1282657697}
+  - component: {fileID: 1282657698}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Untagged
@@ -2211,9 +2212,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 640b9616d616e664292198568254067c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  speedX: 0.3
+  speedX: 0.2
   attackRange: 0.3
+--- !u!114 &1282657698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282657695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71b1943c760c4256a4b4bcaf3a352a13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Zombie: {fileID: 0}
+  anim: {fileID: 0}
+  defaultStateId: 2
 --- !u!1001 &1346923158
 PrefabInstance:
   m_ObjectHideFlags: 0

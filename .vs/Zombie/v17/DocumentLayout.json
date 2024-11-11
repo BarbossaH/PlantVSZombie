@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "D:\\UnityProjects\\Zombie\\Zombie\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|d:\\unityprojects\\zombie\\zombie\\assets\\scripts\\fsm\\fsmstatebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\fsm\\fsmstatebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|d:\\unityprojects\\zombie\\zombie\\assets\\scripts\\houseborder\\boderdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\houseborder\\boderdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|D:\\UnityProjects\\Zombie\\Zombie\\assets\\scripts\\fsm\\fsmtriggerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\fsm\\fsmtriggerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|D:\\UnityProjects\\Zombie\\Zombie\\assets\\scripts\\fsm\\fsmbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\fsm\\fsmbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|D:\\UnityProjects\\Zombie\\Zombie\\assets\\scripts\\fsm\\common\\fsmtriggerid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\fsm\\common\\fsmtriggerid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|D:\\UnityProjects\\Zombie\\Zombie\\assets\\scripts\\fsm\\common\\fsmstateid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\fsm\\common\\fsmstateid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\FSM\\FSMStateBase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\FSM\\FSMStateBase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|D:\\UnityProjects\\Zombie\\Zombie\\assets\\scripts\\zombies\\normalzombie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -39,8 +27,24 @@
       "RelativeMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\plantingmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|D:\\UnityProjects\\Zombie\\Zombie\\assets\\scripts\\boderdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A9C6A3E7-F7E6-C880-8FFA-B82E571A36B9}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\boderdetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\FSM\\FSMBase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\FSM\\FSMBase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\FSM\\FSMTriggerBase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\FSM\\FSMTriggerBase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\FSM\\Common\\FSMTriggerID.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\FSM\\Common\\FSMTriggerID.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\FSM\\Common\\FSMStateID.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\FSM\\Common\\FSMStateID.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\BoderDetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Scripts\\BoderDetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -55,19 +59,30 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "BoderDetector.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\HouseBorder\\BoderDetector.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\HouseBorder\\BoderDetector.cs",
+              "ToolTip": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\HouseBorder\\BoderDetector.cs",
+              "RelativeToolTip": "Assets\\Scripts\\HouseBorder\\BoderDetector.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T19:20:29.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "FSMStateBase.cs",
               "DocumentMoniker": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\FSM\\FSMStateBase.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FSM\\FSMStateBase.cs",
               "ToolTip": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\FSM\\FSMStateBase.cs",
               "RelativeToolTip": "Assets\\Scripts\\FSM\\FSMStateBase.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAywBwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T21:07:17.274Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-08T21:07:17.274Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "FSMBase.cs",
               "DocumentMoniker": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\FSM\\FSMBase.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FSM\\FSMBase.cs",
@@ -75,12 +90,11 @@
               "RelativeToolTip": "Assets\\Scripts\\FSM\\FSMBase.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T21:07:00.45Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-08T21:07:00.45Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "FSMTriggerBase.cs",
               "DocumentMoniker": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\FSM\\FSMTriggerBase.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FSM\\FSMTriggerBase.cs",
@@ -88,12 +102,11 @@
               "RelativeToolTip": "Assets\\Scripts\\FSM\\FSMTriggerBase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T21:06:33.872Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-08T21:06:33.872Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "FSMTriggerID.cs",
               "DocumentMoniker": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\FSM\\Common\\FSMTriggerID.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FSM\\Common\\FSMTriggerID.cs",
@@ -101,12 +114,11 @@
               "RelativeToolTip": "Assets\\Scripts\\FSM\\Common\\FSMTriggerID.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T21:02:48.091Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-08T21:02:48.091Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "FSMStateID.cs",
               "DocumentMoniker": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\FSM\\Common\\FSMStateID.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FSM\\Common\\FSMStateID.cs",
@@ -118,7 +130,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "BoderDetector.cs",
               "DocumentMoniker": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\BoderDetector.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\BoderDetector.cs",
@@ -130,7 +142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "PlantingManager.cs",
               "DocumentMoniker": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Managers\\PlantingManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\PlantingManager.cs",
@@ -142,7 +154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "ZombieBase.cs",
               "DocumentMoniker": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Zombies\\ZombieBase.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Zombies\\ZombieBase.cs",
@@ -154,7 +166,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "GridManager.cs",
               "DocumentMoniker": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Managers\\GridManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\GridManager.cs",
@@ -166,7 +178,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "NormalZombie.cs",
               "DocumentMoniker": "D:\\UnityProjects\\Zombie\\Zombie\\Assets\\Scripts\\Zombies\\NormalZombie.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Zombies\\NormalZombie.cs",

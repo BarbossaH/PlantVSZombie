@@ -1,8 +1,10 @@
-namespace Plant
+namespace Characters.Plant
 {
     using System.Collections;
     using UnityEngine;
     using Managers;
+    using Conf;
+    
     public class SunFlower : PlantBase
     {
         //this script is for creating sun from sunflower, like sky sun manager script

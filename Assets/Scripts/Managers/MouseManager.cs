@@ -1,6 +1,6 @@
 namespace Managers
 {
-
+    using Conf;
     using UnityEngine;
 
     public class MouseManager : SingletonMono<MouseManager>

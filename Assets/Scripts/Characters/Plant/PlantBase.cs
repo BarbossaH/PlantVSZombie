@@ -1,4 +1,4 @@
-namespace Plant
+namespace Characters.Plant
 {
     using UnityEngine;
 

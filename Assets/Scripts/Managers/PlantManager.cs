@@ -1,3 +1,5 @@
+using Conf;
+
 namespace Managers
 {
     using System.Collections.Generic;

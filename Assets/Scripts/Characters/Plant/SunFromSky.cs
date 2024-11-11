@@ -1,7 +1,8 @@
-namespace Plant
+namespace Characters.Plant
 {
     using UnityEngine;
     using Managers;
+    using Conf;
     public class SunFromSky : MonoBehaviour
     {
         //this class is only for generating sun from sky, and set the relative arguments, like SunFlower script

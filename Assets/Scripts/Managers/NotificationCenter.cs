@@ -1,8 +1,8 @@
 namespace Managers
 {
     using System.Collections.Generic;
-  
-
+    using Interfaces;
+    using Conf;
     public class NotificationCenter : SingletonMono<NotificationCenter>
     {
         private readonly List<IObserver> observers = new List<IObserver>();
@@ -20,7 +20,7 @@ namespace Managers
             observers.Remove(observer);
         }
 
-        public void NotifyObserver(Event_Type eventType, object data = null)
+        public void NotifyObserver(EventTypeEnum eventType, object data = null)
         {
             foreach (var observer in observers)
             {

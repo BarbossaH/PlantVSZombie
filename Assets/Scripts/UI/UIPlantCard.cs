@@ -5,6 +5,8 @@ namespace UI
     using UnityEngine.EventSystems;
     using UnityEngine.UI;
     using Managers;
+    using Interfaces;
+    using Conf;
     public class UIPlantCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IObserver
     {
         //private Image cardIcon;
@@ -99,10 +101,10 @@ namespace UI
             MouseManager.Instance.SetMouseSelected(currentPlantType);
         }
 
-        public void OnDataChanged(Event_Type type, object eventData = null)
+        public void OnDataChanged(EventTypeEnum type, object eventData = null)
         {
             //todo refresh the card cd
-            if (type == Event_Type.Planting_Event && eventData!=null && (PlantTypeEnum)eventData == currentPlantType)
+            if (type == EventTypeEnum.PlantingEvent && eventData!=null && (PlantTypeEnum)eventData == currentPlantType)
             {
                 IsReady = false;
             }

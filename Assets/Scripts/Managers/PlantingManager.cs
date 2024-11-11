@@ -1,10 +1,10 @@
 namespace Managers
 {
     using Grid;
-    using Plant;
+    using Characters.Plant;
     using UnityEngine;
     using UnityEngine.EventSystems;
-
+    using Conf;
     public class PlantingManager : SingletonMono<PlantingManager>
     {
         // for planting and previewing the plant selected  
@@ -44,7 +44,7 @@ namespace Managers
                 currentGrid.IsPlanted = true;
                 //GridManager.Instance.SetGridData(currentGrid.plant);
                 //notify observers, like ui
-                NotificationCenter.Instance.NotifyObserver(Event_Type.Planting_Event,
+                NotificationCenter.Instance.NotifyObserver(EventTypeEnum.PlantingEvent,
                     MouseManager.Instance.currentPlantType);
 
 

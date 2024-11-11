@@ -1,5 +1,8 @@
 
-public enum Event_Type
+namespace Conf
 {
-    Planting_Event = 0,
+    public enum EventTypeEnum
+    {
+        PlantingEvent = 0,
+    }
 }

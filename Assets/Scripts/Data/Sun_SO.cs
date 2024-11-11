@@ -1,8 +1,7 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Conf;
 [CreateAssetMenu(fileName = "SunListSO", menuName = "SO/SunListSO")]
 public class SunListSO : ScriptableObject
 {
@@ -13,5 +12,5 @@ public class SunListSO : ScriptableObject
 public class SunData
 {
     public SunTypeEnum sunType;
-    public GameObject SunPrefab;
+    public GameObject sunPrefab;
 }

@@ -1,4 +1,4 @@
-namespace Plant
+namespace Characters.Plant
 {
    public class Peashooter : PlantBase
     {
