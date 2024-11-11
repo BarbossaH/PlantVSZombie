@@ -14,11 +14,13 @@ namespace AIFSM
         {
             anim = GetComponentInChildren<Animator>();
         }
-        private void Start()
+        protected override void Start()
         {
+            base.Start();
             PlayAnimationRandomly();
             MaxHealth = 100;
             CurrentHealth = MaxHealth;
+            IsAttacking = false;
         }
 
         private void FixedUpdate()
@@ -29,7 +31,7 @@ namespace AIFSM
         private void Update()
         {
             Attack();
-        }
+  }
 
         private void PlayAnimationRandomly()
         {
@@ -53,6 +55,10 @@ namespace AIFSM
                     // Debug.Log("attack");
                     IsAttacking = true;
                 }
+            }
+            else
+            {
+                IsAttacking = false;
             }
         }
         

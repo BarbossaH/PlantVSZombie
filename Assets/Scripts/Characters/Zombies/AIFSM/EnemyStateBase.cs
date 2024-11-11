@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System;
+
 namespace AIFSM
 {
     public abstract class EnemyStateBase
@@ -48,6 +49,8 @@ namespace AIFSM
         {
             foreach (var trigger in triggers)
             {
+                // Debug.Log(trigger.TriggerId);
+
                 if (trigger.CheckTrigger(fsm))
                 {
                     EnemyStateIdEnum stateId = map[trigger.TriggerId];

@@ -1,4 +1,5 @@
 
+using System;
 using Characters.Attributes;
 using Interfaces;
 using UnityEngine;
@@ -8,7 +9,13 @@ namespace AIFSM
     {
         [SerializeField] protected float speedX;
         [SerializeField] protected float attackRange;
- 
+        private float walkSpeed;
+
+        protected virtual void Start()
+        {
+            walkSpeed = speedX;
+        }
+
         public void TakeDamaged(float damage)
         {
             CurrentHealth -= damage;
@@ -26,9 +33,14 @@ namespace AIFSM
         
         public float MaxHealth { get; set; }
         public float CurrentHealth { get; set; }
-        public bool IsAttacking{ get; set; }
+
+        public bool IsAttacking { get; set; }
         //for test
-        public void SetSpeed(float speed)
+        public void SetWalkSpeed()
+        {
+            speedX = walkSpeed;
+        }
+        public void SetWalkSpeed(float speed)
         {
             speedX = speed;
         }

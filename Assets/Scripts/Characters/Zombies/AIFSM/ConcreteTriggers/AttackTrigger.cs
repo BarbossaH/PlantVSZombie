@@ -1,10 +1,12 @@
+using UnityEngine;
+
 namespace AIFSM
 {
-    public class SpotTargetTrigger:EnemyTriggerBase
+    public class AttackTrigger:EnemyTriggerBase
     {
         public override void InitTriggerId()
         {
-            TriggerId = EnemyTriggerIdEnum.SpotTarget;
+            TriggerId = EnemyTriggerIdEnum.Attack;
         }
 
         public override bool CheckTrigger(FsmManager fsm)

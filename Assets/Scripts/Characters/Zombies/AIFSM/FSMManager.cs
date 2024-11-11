@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -31,8 +30,13 @@ namespace AIFSM
             //create state objects
             WalkState walkState = new WalkState();
             walkState.AddMap(EnemyTriggerIdEnum.NoHealth,EnemyStateIdEnum.Death);
+            walkState.AddMap(EnemyTriggerIdEnum.Attack,EnemyStateIdEnum.Attack);
+
             //set up state map
             states.Add(walkState);
+            AttackState attackState = new AttackState();
+            attackState.AddMap(EnemyTriggerIdEnum.Walk,EnemyStateIdEnum.Walk);
+            states.Add(attackState);
             
             DeathState deathState = new DeathState();
             states.Add(deathState);

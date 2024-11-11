@@ -5,6 +5,7 @@ namespace AIFSM
         NoHealth,
         EnableAttacking,
         Spawn,
-        SpotTarget,
+        Attack,
+        Walk
     }
 }

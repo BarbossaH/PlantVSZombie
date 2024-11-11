@@ -93,5 +93,18 @@ namespace Managers
                 }
             }
         }
+
+        public void ClearAllPlant()
+        {
+            for (int i = 0; i < gridsPos.Count; i++)
+            {
+                if (gridsPos[i].Plant != null)
+                {
+                    Destroy(gridsPos[i].Plant.gameObject);
+                    gridsPos[i].Plant = null;
+                    gridsPos[i].IsPlanted = false;
+                }
+            }
+        }
     }
 }
