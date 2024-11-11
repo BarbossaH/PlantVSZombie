@@ -7,7 +7,7 @@ namespace AIFSM
             TriggerId = EnemyTriggerIdEnum.SpotTarget;
         }
 
-        public override bool HandleTrigger(FsmManager fsm)
+        public override bool CheckTrigger(FsmManager fsm)
         {
             return fsm.zombie.IsAttacking;
         }

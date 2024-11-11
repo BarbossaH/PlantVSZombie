@@ -17,6 +17,6 @@ namespace AIFSM
         public abstract void InitTriggerId();
         
         //handle trigger,because in compile time, we don't know what need to be handled, so here using an abstract class to declare it and the children will implement the actual details
-        public abstract bool HandleTrigger(FsmManager fsm);
+        public abstract bool CheckTrigger(FsmManager fsm);
     }
 }

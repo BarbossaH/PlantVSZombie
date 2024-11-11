@@ -46,14 +46,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Managers\SunManager.cs" />
-    <Compile Include="Assets\Scripts\Zombies\AIFSM\ConcreteStates\WalkState.cs" />
     <Compile Include="Assets\Scripts\Characters\Zombies\AIFSM\Common\EnemyStateIdEnum.cs" />
     <Compile Include="Assets\Scripts\Characters\Zombies\AIFSM\EnemyTriggerBase.cs" />
     <Compile Include="Assets\Scripts\Managers\MouseManager.cs" />
-    <Compile Include="Assets\Scripts\Zombies\AIFSM\FSMManager.cs" />
     <Compile Include="Assets\Scripts\Managers\PlantManager.cs" />
     <Compile Include="Assets\Scripts\Conf\SunType.cs" />
-    <Compile Include="Assets\Scripts\Zombies\AIFSM\Common\EnemyTriggerIdEnum.cs" />
     <Compile Include="Assets\Scripts\Grid\Grid.cs" />
     <Compile Include="Assets\Scripts\Utils\Utils.cs" />
     <Compile Include="Assets\Scripts\Characters\Zombies\AIFSM\ConcreteTriggers\SpotTargetTrigger.cs" />
@@ -65,8 +62,6 @@
     <Compile Include="Assets\Scripts\Conf\PlantType.cs" />
     <Compile Include="Assets\Scripts\Characters\Zombies\AIFSM\Common\EnemyTriggerIdEnum.cs" />
     <Compile Include="Assets\Scripts\Characters\Plant\Peashooter.cs" />
-    <Compile Include="Assets\Scripts\Zombies\AIFSM\Common\EnemyStateIdEnum.cs" />
-    <Compile Include="Assets\Scripts\Zombies\AIFSM\EnemyStateBase.cs" />
     <Compile Include="Assets\Scripts\Conf\EventType.cs" />
     <Compile Include="Assets\Scripts\Data\Sun_SO.cs" />
     <Compile Include="Assets\Scripts\Conf\SortingOrder.cs" />
@@ -79,7 +74,6 @@
     <Compile Include="Assets\Scripts\Managers\PlantingManager.cs" />
     <Compile Include="Assets\Scripts\UI\UIPlantCard.cs" />
     <Compile Include="Assets\Scripts\Characters\Zombies\AIFSM\FSMManager.cs" />
-    <Compile Include="Assets\Scripts\Zombies\AIFSM\EnemyTriggerBase.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IObserver.cs" />
     <Compile Include="Assets\Scripts\Characters\Plant\Sun.cs" />
     <Compile Include="Assets\Scripts\Characters\Plant\PlantBase.cs" />

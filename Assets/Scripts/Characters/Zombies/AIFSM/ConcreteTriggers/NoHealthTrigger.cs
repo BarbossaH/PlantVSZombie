@@ -9,7 +9,7 @@ namespace AIFSM
             TriggerId = EnemyTriggerIdEnum.NoHealth;
         }
 
-        public override bool HandleTrigger(FsmManager fsm)
+        public override bool CheckTrigger(FsmManager fsm)
         {
             return fsm.zombie.CurrentHealth<=0;
         }

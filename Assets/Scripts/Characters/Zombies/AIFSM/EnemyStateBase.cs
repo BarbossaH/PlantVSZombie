@@ -48,7 +48,7 @@ namespace AIFSM
         {
             foreach (var trigger in triggers)
             {
-                if (trigger.HandleTrigger(fsm))
+                if (trigger.CheckTrigger(fsm))
                 {
                     EnemyStateIdEnum stateId = map[trigger.TriggerId];
                     fsm.ChangeActiveState(stateId);

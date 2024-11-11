@@ -26,6 +26,7 @@ namespace AIFSM
         }
         private void ConfigFsm()
         {
+            //if there are many state that need to configure, we can use reflection to implement this
             states = new List<EnemyStateBase>();
             //create state objects
             WalkState walkState = new WalkState();
@@ -46,8 +47,10 @@ namespace AIFSM
         //check the current state and execute current state
         public void Update()
         {
-            //if trigger has been changed, this will check triggerId is suitbale
+            //if trigger has been changed, this will check triggerId is suitable
+            //keep checking the state of the game object, if the state has been changed, like health, attack, spotting player
             currentState.CheckTrigger(this);
+            //after checking and changing the state, if the new state has something to do, then call the next method
             currentState.ExecuteState(this);
         }
 
@@ -56,7 +59,7 @@ namespace AIFSM
             currentState.ExitState(this);
             //here state could translate to default state, but default state is not in the states
             //if stateId is default, then assign currentState to default state
-            if (stateId == EnemyStateIdEnum.Default) stateId = defaultStateId;
+            if (stateId == EnemyStateIdEnum.Default) {stateId = defaultStateId;}
             currentState = states.Find(s => s.StateId == stateId);
             currentState.EnterState(this);
         }
