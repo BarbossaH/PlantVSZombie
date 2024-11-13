@@ -38,11 +38,16 @@ namespace Managers
 
         private void Plant()
         {
-            if (currentGrid != null && currentGrid.Plant != null && !currentGrid.IsPlanted)
+            if (currentGrid != null && currentGrid.Plant is not null && !currentGrid.IsPlanted)
             {
-                currentGrid.Plant.GetComponent<PlantBase>().Plant();
+                if(PlayerManager.Instance.SunAmount<(int)MouseManager.Instance.currentPlantType) {return;} 
+                
+                PlantBase plant = currentGrid.Plant.GetComponent<PlantBase>();
+                plant.Plant();
                 currentGrid.IsPlanted = true;
                 //GridManager.Instance.SetGridData(currentGrid.plant);
+                //update the amount of sun of player
+                PlayerManager.Instance.SunAmount -= (int)MouseManager.Instance.currentPlantType;
                 //notify observers, like ui
                 NotificationCenter.Instance.NotifyObserver(EventTypeEnum.PlantingEvent,
                     MouseManager.Instance.currentPlantType);
@@ -81,11 +86,11 @@ namespace Managers
             {
                 if (currentGrid.IsPlanted) return;
                 //show the preview of the plant in the grid
-                if (currentGrid.Plant == null)
+                if (currentGrid.Plant is null)
                 {
                     GameObject prefab =
                         PlantManager.Instance.GetPlantPrefabByType(MouseManager.Instance.currentPlantType);
-                    if (prefab != null)
+                    if (prefab is not null)
                     {
                         currentGrid.Plant = GameObject.Instantiate(prefab, currentGrid.PointWorldPos,
                             Quaternion.identity, PlantManager.Instance.transform);
@@ -102,6 +107,7 @@ namespace Managers
             if(currentGrid is {IsPlanted: false})
             {
                 Destroy(currentGrid.Plant);
+                currentGrid.Plant = null;
             }
         }
 

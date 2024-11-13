@@ -1,7 +1,7 @@
 using Characters.Attributes;
 using UnityEngine;
 
-namespace AIFSM
+namespace Zombies
 {
     public class AttackState:EnemyStateBase
     {
@@ -23,6 +23,12 @@ namespace AIFSM
             base.ExitState(fsm);
             // fsm.zombie.SetSpeed(1.0f);
             fsm.anim.SetBool(ZombieAnimationParams.Attack, false);
+        }
+
+        public override void ExecuteState(FsmManager fsm)
+        {
+            base.ExecuteState(fsm);
+            fsm.zombie.AttackPlant();
         }
     }
 }

@@ -106,5 +106,19 @@ namespace Managers
                 }
             }
         }
+
+        public int GetAllPantCount()
+        {
+            int count = 0;
+            for (int i = 0; i < gridsPos.Count; i++)
+            {
+                if (gridsPos[i].Plant != null && gridsPos[i].IsPlanted)
+                {
+                    count++;
+                }
+            }
+
+            return count;
+        }
     }
 }

@@ -1,12 +1,15 @@
+using Conf;
+using Interfaces;
+
 namespace Managers
 {
 
     using TMPro;
     using UnityEngine;
 
-    public class UIManager : MonoBehaviour
+    public class UICardGroup : MonoBehaviour,IDataObserver
     {
-        public static UIManager Instance;
+        public static UICardGroup Instance;
 
         private TextMeshProUGUI sunAmountTMP;
 
@@ -34,6 +37,14 @@ namespace Managers
             //Debug.Log(screenPos);
             screenPos.y += 90f;
             return screenPos;
+        }
+
+        public void OnDataChanged(EventTypeEnum type, object eventData = null)
+        {
+            if (type is EventTypeEnum.UpdateSumAmount && eventData is int sumAmount)
+            {
+                UpdateSunAmount(sumAmount);
+            }
         }
     }
 }

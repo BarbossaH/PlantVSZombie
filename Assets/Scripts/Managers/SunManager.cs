@@ -10,7 +10,7 @@ namespace Managers
         {
             SunListSO  sunSo= Resources.Load<SunListSO>("SunListSO");
 
-            if (sunSo == null)
+            if (sunSo is null)
             {
                 Debug.LogError(
                     "SunListSO asset not found in Resources. Please ensure it exists in a Resources folder.");

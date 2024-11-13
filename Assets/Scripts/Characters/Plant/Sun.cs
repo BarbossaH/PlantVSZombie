@@ -1,3 +1,5 @@
+using Conf;
+
 namespace Characters.Plant
 {
 
@@ -17,7 +19,7 @@ namespace Characters.Plant
         {
             //actually I believe we should destroy the clicked sun and create a new one, create a new one first, then destroy the old one
             //TODO: generate a new one and destroy the clicked one
-            Vector3 targetScreenPos = UIManager.Instance.GetSunTMPScreenPos();
+            Vector3 targetScreenPos = UICardGroup.Instance.GetSunTMPScreenPos();
             if (countdownCoroutine != null)
             {
                 StopCoroutine(countdownCoroutine);
@@ -100,7 +102,9 @@ namespace Characters.Plant
         private IEnumerator SunFlying(Vector3 destinationPos)
         {
             //get the direction of destination
-            Vector3 screenStartPos = Camera.main.WorldToScreenPoint(transform.position);
+            var cameraMain = Camera.main;
+            if (cameraMain is null) yield break; 
+            Vector3 screenStartPos = cameraMain.WorldToScreenPoint(transform.position);
 
             // Ensure destination position includes correct Z depth
             //destinationPos.z = screenStartPos.z;
@@ -110,10 +114,10 @@ namespace Characters.Plant
                 yield return new WaitForSeconds(0.005f);
                 screenStartPos = Vector3.MoveTowards(screenStartPos, destinationPos, flyingSpeed);
 
-                transform.position = Camera.main.ScreenToWorldPoint(screenStartPos);
+                transform.position = cameraMain.ScreenToWorldPoint(screenStartPos);
             }
 
-            PlayerManager.Instance.SunAmount += 50;
+            PlayerManager.Instance.SunAmount += (int)SunTypeEnum.Normal;
 
             DestroySelf();
         }

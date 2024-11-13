@@ -4,7 +4,7 @@ namespace Conf
     public enum PlantTypeEnum
     {
         None = 0,
-        SunFlower,
-        Pea,
+        SunFlower=50,
+        Pea =75,
     }
 }

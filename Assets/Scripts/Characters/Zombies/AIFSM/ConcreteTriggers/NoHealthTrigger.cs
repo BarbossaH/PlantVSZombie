@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace AIFSM
+namespace Zombies
 {
     public class NoHealthTrigger:EnemyTriggerBase
     {

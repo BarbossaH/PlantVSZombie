@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace AIFSM
+namespace Zombies
 {
     public class FsmManager: MonoBehaviour
     {

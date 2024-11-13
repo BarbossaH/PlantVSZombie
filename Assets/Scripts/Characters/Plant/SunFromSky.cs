@@ -27,7 +27,9 @@ namespace Characters.Plant
 
         private void CreateSun(SunTypeEnum sunType = SunTypeEnum.Normal)
         {
-            Sun sun = GameObject.Instantiate(SunManager.Instance.GetSunPrefabByType(sunType), Vector3.zero,
+            GameObject prefab = SunManager.Instance.GetSunPrefabByType(sunType);
+            // Debug.Log(prefab);
+            Sun sun = GameObject.Instantiate(prefab, Vector3.zero,
                 Quaternion.identity, SunManager.Instance.transform).GetComponent<Sun>();
             float landingPosY = Random.Range(sunLandPosMinY, sunLandPosMaxY);
             float spawnSunPosX = Random.Range(spawnSunPosMinX, spawnSunPosMaxX);

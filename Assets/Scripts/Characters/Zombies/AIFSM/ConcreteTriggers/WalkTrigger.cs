@@ -1,4 +1,4 @@
-namespace AIFSM
+namespace Zombies
 {
     public class WalkTrigger:EnemyTriggerBase
     {

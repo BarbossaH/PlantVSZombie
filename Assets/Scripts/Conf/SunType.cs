@@ -3,8 +3,8 @@ namespace Conf
     public enum SunTypeEnum
     {
         None = 0,
-        Samll,
-        Normal,
+        Small,
+        Normal=25,
         Large
     }
 }

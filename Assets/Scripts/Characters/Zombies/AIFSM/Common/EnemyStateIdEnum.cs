@@ -1,4 +1,4 @@
-namespace AIFSM
+namespace Zombies
 {
     public enum EnemyStateIdEnum
     {

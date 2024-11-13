@@ -50,6 +50,7 @@
     <Compile Include="Assets\Scripts\Characters\Zombies\AIFSM\EnemyTriggerBase.cs" />
     <Compile Include="Assets\Scripts\Managers\MouseManager.cs" />
     <Compile Include="Assets\Scripts\Test\Test.cs" />
+    <Compile Include="Assets\Scripts\UI\PlantCards\UIPeaCard.cs" />
     <Compile Include="Assets\Scripts\Managers\PlantManager.cs" />
     <Compile Include="Assets\Scripts\Conf\SunType.cs" />
     <Compile Include="Assets\Scripts\Grid\Grid.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="Assets\Scripts\Conf\PlantType.cs" />
     <Compile Include="Assets\Scripts\Characters\Zombies\AIFSM\Common\EnemyTriggerIdEnum.cs" />
     <Compile Include="Assets\Scripts\Characters\Plant\Peashooter.cs" />
+    <Compile Include="Assets\Scripts\Characters\Zombies\Attack.cs" />
     <Compile Include="Assets\Scripts\Characters\Zombies\AIFSM\ConcreteTriggers\AttackTrigger.cs" />
     <Compile Include="Assets\Scripts\Conf\EventType.cs" />
     <Compile Include="Assets\Scripts\Data\Sun_SO.cs" />
@@ -70,10 +72,8 @@
     <Compile Include="Assets\Scripts\Managers\PlayerManager.cs" />
     <Compile Include="Assets\Scripts\Characters\Zombies\AIFSM\ConcreteStates\WalkState.cs" />
     <Compile Include="Assets\Scripts\Characters\Plant\SunFromSky.cs" />
-    <Compile Include="Assets\Scripts\Managers\UIManager.cs" />
     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
     <Compile Include="Assets\Scripts\Managers\PlantingManager.cs" />
-    <Compile Include="Assets\Scripts\UI\UIPlantCard.cs" />
     <Compile Include="Assets\Scripts\Characters\Zombies\AIFSM\FSMManager.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IObserver.cs" />
     <Compile Include="Assets\Scripts\Characters\Plant\Sun.cs" />
@@ -83,10 +83,13 @@
     <Compile Include="Assets\Scripts\Characters\Zombies\ZombieBase.cs" />
     <Compile Include="Assets\Scripts\Characters\Attributes\ZombieAnimationParams.cs" />
     <Compile Include="Assets\Scripts\Characters\Plant\SunFlower.cs" />
+    <Compile Include="Assets\Scripts\UI\PlantCards\UISunCard.cs" />
     <Compile Include="Assets\Scripts\Data\Plant_SO.cs" />
+    <Compile Include="Assets\Scripts\UI\PlantCards\UICardBase.cs" />
     <Compile Include="Assets\Scripts\Interfaces\IDamageable.cs" />
     <Compile Include="Assets\Scripts\Characters\Zombies\AIFSM\ConcreteStates\DeathState.cs" />
     <Compile Include="Assets\Scripts\Managers\NotificationCenter.cs" />
+    <Compile Include="Assets\Scripts\UI\UICardGroup.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

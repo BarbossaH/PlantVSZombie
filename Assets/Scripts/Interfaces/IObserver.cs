@@ -1,7 +1,7 @@
 namespace Interfaces
 {
     using Conf;
-    public interface IObserver 
+    public interface IDataObserver 
     {
         void OnDataChanged(EventTypeEnum type, object eventData=null); 
     }

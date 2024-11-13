@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PlantListSO
   m_EditorClassIdentifier: 
   plantsList:
-  - PlantType: 1
+  - PlantType: 50
     PlantPrefab: {fileID: 1370745143833888390, guid: dcf57f09f63a5634084eb46832ea1f36, type: 3}
-  - PlantType: 2
+  - PlantType: 75
     PlantPrefab: {fileID: 1095026110640782835, guid: 476f60f3f79ea424db811b76c199cd81, type: 3}

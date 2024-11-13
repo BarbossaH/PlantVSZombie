@@ -10,13 +10,8 @@ namespace Managers
         private GameObject plantFMouse;
 
         //check mouse if selected or not
-        private bool isSelected;
 
-        public bool IsSelected
-        {
-            get { return isSelected; }
-            private set { isSelected = value; }
-        }
+        private bool IsSelected { get; set; }
 
         public void SetMouseSelected(PlantTypeEnum plantType)
         {
@@ -47,15 +42,11 @@ namespace Managers
                 SetPlantFollowMouse();
             }
 
-            if (Input.GetMouseButtonDown(0))
-            {
-                //try to plan the current plant
-            }
-            else if (Input.GetMouseButtonDown(1))
-            {
-                //Cancel the selected state of the mouse
-                CancelSelected();
-            }
+           if (Input.GetMouseButtonDown(1))
+           {
+            //Cancel the selected state of the mouse
+            CancelSelected();
+           }
 
         }
 

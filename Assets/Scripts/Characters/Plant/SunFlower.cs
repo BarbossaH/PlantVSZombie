@@ -1,6 +1,7 @@
+using System.Collections;
+
 namespace Characters.Plant
 {
-    using System.Collections;
     using UnityEngine;
     using Managers;
     using Conf;
@@ -12,43 +13,49 @@ namespace Characters.Plant
         //when this plant is created but not planted, its animation should not be played until it's planted
         //if it's created for player previewing, it also should be translucent.
         [SerializeField] private float changeColorDuration = 0.5f;
-        
+
+
+        public override float MaxHealth { get; set; }
+        public override float CurrentHealth { get; set; }
+        public override float CdDuration { get; set; }
+
+        protected override void Awake()
+        {
+            base.Awake();
+            MaxHealth = 30;
+            CurrentHealth = MaxHealth;
+            CdDuration = 24f;
+        }
+
         public override void ActivatePlantFunction()
         {
-            InvokeRepeating(nameof(CreateSun), 3, 10);
+            // InvokeRepeating(nameof(CreateSun), CdDuration, CdDuration);
+            StartCoroutine(SunCreateCoroutine());
         }
+        
 
+        private IEnumerator SunCreateCoroutine()
+        {
+            while (true)
+            {
+                yield return new WaitForSeconds(CdDuration);
+                CreateSun();
+            }
+        }
         private void CreateSun()
         {
-            CreateSun(SunTypeEnum.Normal);
+            StartCoroutine(ChangeColorRoutine(changeColorDuration,new Color(1.0f, 0.6f, 0),InstantiateSunNormal));
         }
-
-        private void CreateSun(SunTypeEnum sunType = SunTypeEnum.Normal)
+        
+        private void InstantiateSunNormal()
         {
-            ChangeFlowerColor();
+            InstantiateSun();
+        }
+        private void InstantiateSun(SunTypeEnum sunType = SunTypeEnum.Normal)
+        {
             Sun sun = GameObject.Instantiate(SunManager.Instance.GetSunPrefabByType(sunType), transform.position,
                 Quaternion.identity, SunManager.Instance.transform).GetComponent<Sun>();
             sun.JumpAnimationFromFlower();
         }
-
-        private void ChangeFlowerColor()
-        {
-            StartCoroutine(ChangeColorRoutine());
-        }
-
-        private IEnumerator ChangeColorRoutine()
-        {
-            float currentTime = 0f;
-
-            while (currentTime < changeColorDuration)
-            {
-                currentTime += 0.05f;
-                render.color = Color.Lerp(Color.white, new Color(1.0f, 0.6f, 0), currentTime / changeColorDuration);
-                yield return new WaitForSeconds(0.05f);
-            }
-
-            render.color = Color.white;
-        }
-
     }
 }

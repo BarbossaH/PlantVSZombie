@@ -1,3 +1,5 @@
+using Conf;
+
 namespace Managers
 {
     public class PlayerManager : SingletonMono<PlayerManager>
@@ -6,23 +8,18 @@ namespace Managers
 
         public int SunAmount
         {
-            get { return sunAmount; }
+            get=>sunAmount;
             set
             {
                 sunAmount = value;
-                UIManager.Instance.UpdateSunAmount(sunAmount);
+                UICardGroup.Instance.UpdateSunAmount(sunAmount);
+                NotificationCenter.Instance.NotifyObserver(EventTypeEnum.UpdateSumAmount, sunAmount);
             }
-
-        }
-
-        private void Awake()
-        {
-            Instance = this;
         }
 
         private void Start()
         {
-            SunAmount = 100;
+            SunAmount = 0;
         }
     }
 }

@@ -1,6 +1,6 @@
 using Characters.Attributes;
 
-namespace AIFSM
+namespace Zombies
 {
     public class WalkState:EnemyStateBase
     {

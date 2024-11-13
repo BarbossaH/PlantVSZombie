@@ -1,14 +1,14 @@
 
-using System;
-using Characters.Attributes;
+
 using Interfaces;
 using UnityEngine;
-namespace AIFSM
+namespace Zombies
 {
     public class ZombieBase : MonoBehaviour,IDamageable
     {
         [SerializeField] protected float speedX;
         [SerializeField] protected float attackRange;
+        [SerializeField] protected float zombieDamage;
         private float walkSpeed;
 
         protected virtual void Start()
@@ -25,7 +25,7 @@ namespace AIFSM
                 Die();
             }
         }
-
+        public virtual void AttackPlant(){}
         public void Die()
         {
             // Debug.Log("play death animation");
@@ -34,7 +34,7 @@ namespace AIFSM
         public float MaxHealth { get; set; }
         public float CurrentHealth { get; set; }
 
-        public bool IsAttacking { get; set; }
+        public bool IsAttacking { get;protected set; }
         //for test
         public void SetWalkSpeed()
         {

@@ -1,5 +1,5 @@
 
-namespace AIFSM
+namespace Zombies
 {
     public abstract class EnemyTriggerBase
     {

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SunListSO
   m_EditorClassIdentifier: 
   SunList:
-  - sunType: 2
+  - sunType: 25
     sunPrefab: {fileID: 4445492769486727323, guid: fcc91c66464bec241a5151e7d9a6e7e8, type: 3}

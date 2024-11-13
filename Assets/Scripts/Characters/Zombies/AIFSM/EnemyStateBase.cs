@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System;
 
-namespace AIFSM
+namespace Zombies
 {
     public abstract class EnemyStateBase
     {
@@ -29,7 +29,7 @@ namespace AIFSM
         }
         private void CreateTrigger(EnemyTriggerIdEnum triggerId)
         {
-            Type triggerBase = Type.GetType("AIFSM." + triggerId + "Trigger");
+            Type triggerBase = Type.GetType("Zombies." + triggerId + "Trigger");
 
             if (triggerBase == null)
             {

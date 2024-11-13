@@ -5,9 +5,9 @@ namespace Managers
     using Conf;
     public class NotificationCenter : SingletonMono<NotificationCenter>
     {
-        private readonly List<IObserver> observers = new List<IObserver>();
+        private readonly List<IDataObserver> observers = new List<IDataObserver>();
 
-        public void RegisterObserver(IObserver observer)
+        public void RegisterObserver(IDataObserver observer)
         {
             if (!observers.Contains(observer))
             {
@@ -15,7 +15,7 @@ namespace Managers
             }
         }
 
-        public void UnregisterObserver(IObserver observer)
+        public void UnregisterObserver(IDataObserver observer)
         {
             observers.Remove(observer);
         }
