@@ -1,5 +1,5 @@
 
-namespace Zombies
+namespace Characters.Zombies
 {
     public abstract class EnemyTriggerBase
     {

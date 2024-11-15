@@ -44,6 +44,7 @@ namespace Managers
                 
                 PlantBase plant = currentGrid.Plant.GetComponent<PlantBase>();
                 plant.Plant();
+                plant.Row = currentGrid.RowIndex;
                 currentGrid.IsPlanted = true;
                 //GridManager.Instance.SetGridData(currentGrid.plant);
                 //update the amount of sun of player

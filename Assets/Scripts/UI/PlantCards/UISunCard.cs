@@ -16,13 +16,9 @@ namespace UI
             CurrentPlantType=PlantTypeEnum.SunFlower;
             sunAmountTMP.text = ((int)CurrentPlantType).ToString();
 
-            NotificationCenter.Instance.RegisterObserver(this);
         }
 
-        private void OnDestroy()
-        {
-            NotificationCenter.Instance.UnregisterObserver(this);
-        }
+  
  
     }
 }

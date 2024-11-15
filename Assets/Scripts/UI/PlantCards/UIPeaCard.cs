@@ -18,12 +18,6 @@ namespace UI
             base.Start();
             CurrentPlantType = PlantTypeEnum.Pea;
             sunAmountTMP.text = ((int)CurrentPlantType).ToString();
-            NotificationCenter.Instance.RegisterObserver(this);
         }
-        private void OnDestroy()
-        {
-            NotificationCenter.Instance.UnregisterObserver(this);
-        }
-     
-    }
+   }
 }

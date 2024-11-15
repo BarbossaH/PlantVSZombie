@@ -1,4 +1,4 @@
-namespace Zombies
+namespace Characters.Zombies
 {
     public enum EnemyStateIdEnum
     {

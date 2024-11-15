@@ -9,6 +9,8 @@ namespace Grid
         public Vector3 PointWorldPos { get; set; }
 
         public GameObject Plant;
+        
+        public int RowIndex { get; set; }
     }
 }
 

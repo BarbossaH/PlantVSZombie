@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Zombies
+namespace Characters.Zombies
 {
     public class NoHealthTrigger:EnemyTriggerBase
     {

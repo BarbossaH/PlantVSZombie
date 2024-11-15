@@ -51,6 +51,9 @@ TagManager:
   - name: Zombie
     uniqueID: 3951240725
     locked: 0
+  - name: Bullet
+    uniqueID: 4164993739
+    locked: 0
   - name: Sun
     uniqueID: 1823249387
     locked: 0

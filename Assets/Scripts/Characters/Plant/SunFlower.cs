@@ -24,7 +24,7 @@ namespace Characters.Plant
             base.Awake();
             MaxHealth = 30;
             CurrentHealth = MaxHealth;
-            CdDuration = 24f;
+            CdDuration = 2f;
         }
 
         public override void ActivatePlantFunction()

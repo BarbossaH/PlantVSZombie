@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Zombies
+namespace Characters.Zombies
 {
     public class FsmManager: MonoBehaviour
     {

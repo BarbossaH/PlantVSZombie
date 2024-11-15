@@ -5,32 +5,38 @@ using Managers;
 using Grid;
 using Random = UnityEngine.Random;
 
-namespace Zombies
+namespace Characters.Zombies
 {
     public class NormalZombie : ZombieBase
     {
         private readonly string[] animationNames = { "Walk1_NormalZombie", "Walk2_NormalZombie", "Walk3_NormalZombie" };
-        private Animator anim;
+        // private Animator anim;
         private float timer;
         private readonly float attackDuration = 0.5f;
         private LogicGrid currentGrid;
         private GameObject currentPlant;
-        private void Awake()
+        private Rigidbody2D rb;
+        protected override void Awake()
         {
-            anim = GetComponentInChildren<Animator>();
+            base.Awake();
+            rb = GetComponent<Rigidbody2D>();
         }
         protected override void Start()
         {
             base.Start();
             PlayAnimationRandomly();
-            MaxHealth = 100;
+            MaxHealth = 15;
             CurrentHealth = MaxHealth;
             IsAttacking = false;
         }
 
         private void FixedUpdate()
         {
-            Move();
+            if (CurrentHealth > 0)
+            {
+                Move();
+            }
+                
         }
 
         private void Update()
@@ -105,7 +111,8 @@ namespace Zombies
         
         private void Move()
         {
-            transform.Translate(new Vector3(-speedX * Time.fixedDeltaTime, 0, 0));
+            rb.MovePosition(transform.position + new Vector3(-speedX * Time.fixedDeltaTime, 0, 0));
+            // transform.Translate(new Vector3(-speedX * Time.fixedDeltaTime, 0, 0));
         }
         
     }

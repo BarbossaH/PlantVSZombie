@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System;
 
-namespace Zombies
+namespace Characters.Zombies
 {
     public abstract class EnemyStateBase
     {
@@ -11,7 +11,7 @@ namespace Zombies
         
         public  EnemyStateIdEnum StateId { get; protected set; }
         private readonly List<EnemyTriggerBase> triggers;
-        public EnemyStateBase()
+        protected EnemyStateBase()
         {
             map = new Dictionary<EnemyTriggerIdEnum, EnemyStateIdEnum>();
             triggers = new List<EnemyTriggerBase>();
@@ -29,7 +29,7 @@ namespace Zombies
         }
         private void CreateTrigger(EnemyTriggerIdEnum triggerId)
         {
-            Type triggerBase = Type.GetType("Zombies." + triggerId + "Trigger");
+            Type triggerBase = Type.GetType("Characters.Zombies." + triggerId + "Trigger");
 
             if (triggerBase == null)
             {

@@ -51,6 +51,7 @@
     <Compile Include="Assets\Scripts\Managers\MouseManager.cs" />
     <Compile Include="Assets\Scripts\Test\Test.cs" />
     <Compile Include="Assets\Scripts\UI\PlantCards\UIPeaCard.cs" />
+    <Compile Include="Assets\Scripts\Data\Bullet_SO.cs" />
     <Compile Include="Assets\Scripts\Managers\PlantManager.cs" />
     <Compile Include="Assets\Scripts\Conf\SunType.cs" />
     <Compile Include="Assets\Scripts\Grid\Grid.cs" />
@@ -62,6 +63,8 @@
     <Compile Include="Assets\Scripts\Characters\Zombies\AIFSM\ConcreteTriggers\NoHealthTrigger.cs" />
     <Compile Include="Assets\Scripts\Conf\PlantType.cs" />
     <Compile Include="Assets\Scripts\Characters\Zombies\AIFSM\Common\EnemyTriggerIdEnum.cs" />
+    <Compile Include="Assets\Scripts\Characters\Bullets\PeaBullet.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\IDataObserver.cs" />
     <Compile Include="Assets\Scripts\Characters\Plant\Peashooter.cs" />
     <Compile Include="Assets\Scripts\Characters\Zombies\Attack.cs" />
     <Compile Include="Assets\Scripts\Characters\Zombies\AIFSM\ConcreteTriggers\AttackTrigger.cs" />
@@ -72,10 +75,11 @@
     <Compile Include="Assets\Scripts\Managers\PlayerManager.cs" />
     <Compile Include="Assets\Scripts\Characters\Zombies\AIFSM\ConcreteStates\WalkState.cs" />
     <Compile Include="Assets\Scripts\Characters\Plant\SunFromSky.cs" />
+    <Compile Include="Assets\Scripts\Characters\Bullets\BulletBase.cs" />
     <Compile Include="Assets\Scripts\Managers\GameManager.cs" />
     <Compile Include="Assets\Scripts\Managers\PlantingManager.cs" />
+    <Compile Include="Assets\Scripts\Conf\LayerConstants.cs" />
     <Compile Include="Assets\Scripts\Characters\Zombies\AIFSM\FSMManager.cs" />
-    <Compile Include="Assets\Scripts\Interfaces\IObserver.cs" />
     <Compile Include="Assets\Scripts\Characters\Plant\Sun.cs" />
     <Compile Include="Assets\Scripts\Characters\Zombies\AIFSM\ConcreteTriggers\WalkTrigger.cs" />
     <Compile Include="Assets\Scripts\Characters\Plant\PlantBase.cs" />
@@ -89,6 +93,7 @@
     <Compile Include="Assets\Scripts\Interfaces\IDamageable.cs" />
     <Compile Include="Assets\Scripts\Characters\Zombies\AIFSM\ConcreteStates\DeathState.cs" />
     <Compile Include="Assets\Scripts\Managers\NotificationCenter.cs" />
+    <Compile Include="Assets\Scripts\Conf\BulletTypeEnum.cs" />
     <Compile Include="Assets\Scripts\UI\UICardGroup.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />

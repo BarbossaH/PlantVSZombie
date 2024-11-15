@@ -16,7 +16,7 @@ namespace Characters.Plant
 
         private void Start()
         {
-            InvokeRepeating(nameof(CreateSun), 2, 15);
+            InvokeRepeating(nameof(CreateSun), 2, 2);
 
         }
 

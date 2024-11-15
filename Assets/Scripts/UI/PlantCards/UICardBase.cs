@@ -56,6 +56,8 @@ namespace UI
       {
          maskImg.fillAmount = 1;
          IsReady = false;
+         NotificationCenter.Instance.RegisterObserver(this);
+
       }
 
       private void Update()
@@ -68,6 +70,11 @@ namespace UI
          {
             cardImg.color = new Color(1, 1, 1);
          }
+      }
+
+      private void OnDestroy()
+      {
+         NotificationCenter.Instance.UnregisterObserver(this);
       }
 
       private void StartCd(float duration)

@@ -1,7 +1,7 @@
 using Characters.Attributes;
 using UnityEngine;
 
-namespace Zombies
+namespace Characters.Zombies
 {
     public class AttackState:EnemyStateBase
     {

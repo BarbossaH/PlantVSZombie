@@ -1,5 +1,5 @@
 
-using Zombies;
+using Characters.Zombies;
 using Managers;
 using UnityEngine;
 
