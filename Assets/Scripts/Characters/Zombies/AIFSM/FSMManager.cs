@@ -29,14 +29,25 @@ namespace Characters.Zombies
             states = new List<EnemyStateBase>();
             //create state objects
             WalkState walkState = new WalkState();
-            walkState.AddMap(EnemyTriggerIdEnum.NoHealth,EnemyStateIdEnum.Death);
             walkState.AddMap(EnemyTriggerIdEnum.Attack,EnemyStateIdEnum.Attack);
-
+            walkState.AddMap(EnemyTriggerIdEnum.LowHealthWalk,EnemyStateIdEnum.WalkWithoutHead);
             //set up state map
             states.Add(walkState);
+            
             AttackState attackState = new AttackState();
             attackState.AddMap(EnemyTriggerIdEnum.Walk,EnemyStateIdEnum.Walk);
+            attackState.AddMap(EnemyTriggerIdEnum.LowHealthAttack,EnemyStateIdEnum.AttackWithoutHead);
             states.Add(attackState);
+
+            AttackWithoutHeadState attackWithoutHeadState = new AttackWithoutHeadState();
+            attackWithoutHeadState.AddMap(EnemyTriggerIdEnum.LowHealthWalk,EnemyStateIdEnum.WalkWithoutHead);
+            attackWithoutHeadState.AddMap(EnemyTriggerIdEnum.NoHealth,EnemyStateIdEnum.Death);
+            states.Add(attackWithoutHeadState);
+            
+            WalkWithoutHeadState walkWithoutHeadState = new WalkWithoutHeadState();
+            walkWithoutHeadState.AddMap(EnemyTriggerIdEnum.LowHealthAttack,EnemyStateIdEnum.AttackWithoutHead);
+            walkWithoutHeadState.AddMap(EnemyTriggerIdEnum.NoHealth,EnemyStateIdEnum.Death);
+            states.Add(walkWithoutHeadState);
             
             DeathState deathState = new DeathState();
             states.Add(deathState);

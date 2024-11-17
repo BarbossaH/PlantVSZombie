@@ -1,8 +1,7 @@
+using UnityEngine;
 
 namespace Grid
 {
-    using UnityEngine;
-
     public class LogicGrid 
     {
         public bool IsPlanted { get; set; }

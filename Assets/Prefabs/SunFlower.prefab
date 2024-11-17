@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1503030226064738733}
   - component: {fileID: 5772362029486157461}
   - component: {fileID: 8095277754376635773}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SunFlower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1883923833
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b85d6de83d40d044dbbb7fcd29560c9a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -119,3 +119,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43f38cb56562fb74f8a52622d4af62fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  changeColorDuration: 0.5

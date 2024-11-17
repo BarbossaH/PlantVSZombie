@@ -5,7 +5,9 @@ namespace Characters.Zombies
         None,
         Default,
         Walk,
+        WalkWithoutHead,
         Attack,
+        AttackWithoutHead,
         Death
     }
 }

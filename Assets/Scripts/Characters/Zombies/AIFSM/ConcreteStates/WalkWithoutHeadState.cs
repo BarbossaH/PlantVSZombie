@@ -2,21 +2,19 @@ using Characters.Attributes;
 
 namespace Characters.Zombies
 {
-    public class WalkState:EnemyStateBase
+    public class WalkWithoutHeadState:EnemyStateBase
     {
         public override void InitStateId()
         {
-            StateId = EnemyStateIdEnum.Walk;
+            StateId = EnemyStateIdEnum.WalkWithoutHead;
         }
 
         public override void EnterState(FsmManager fsm)
         {
             base.EnterState(fsm);
-            //play animation
             fsm.zombie.SetWalkSpeed(0.3f);
-            //because walk is default state, so when other states exit their states, it should return to walk state
-            //which means we need to care about the switching of this animation 
-            fsm.anim.SetTrigger(ZombieAnimationParams.Walk);
+
+            fsm.anim.SetTrigger(ZombieAnimationParams.LowHealth);
         }
 
         public override void ExitState(FsmManager fsm)

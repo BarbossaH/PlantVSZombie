@@ -1,7 +1,6 @@
 using System.Collections;
 using Conf;
 using Managers;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Characters.Plant
@@ -20,7 +19,6 @@ namespace Characters.Plant
             base.Awake();
             MaxHealth = 100;
             CurrentHealth = MaxHealth;
-            CurrentHealth = 0.5f;
             //shoot frequency, shoot once per 2 seconds
             CdDuration = 2.0f;
             gun = transform.Find("Gun");
@@ -32,6 +30,7 @@ namespace Characters.Plant
         /// </summary>
         public override void ActivatePlantFunction()
         {
+            Debug.Log(CurrentHealth);
             StartDetectZombie();
         }
 
@@ -53,7 +52,10 @@ namespace Characters.Plant
                 else
                 {
                     isShooting = false;
-                    StopCoroutine(shootRoutine);
+                    if (shootRoutine is not null)
+                    {
+                        StopCoroutine(shootRoutine);
+                    }
                 }
             }
         }

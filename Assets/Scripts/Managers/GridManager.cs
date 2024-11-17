@@ -1,45 +1,20 @@
-using System;
-using System.Collections;
+
 using System.Collections.Generic;
-using Characters.Plant;
+using Conf;
 using UnityEngine;
 using Grid;
-using Conf;
 
 namespace Managers
 {
     
-    public enum GridRowEnum
-    {
-        FirstRow = 0,
-        SecondRow,
-        ThirdRow,
-        ForthRow,
-        FifthRow
-    }
-
-    public enum GridColEnum
-    {
-        FirstCol = 0,
-        SecondCol,
-        ThirdCol,
-        ForthCol,
-        FifthCol,
-        SixthCol,
-        SeventhCol,
-        EighthCol,
-        NinethCol
-    }
-
     public class GridManager : SingletonMono<GridManager>
     {
-        /*to preset a list to store the position of each grid, and when the moust click the screen, then campare to each grid and find the nearest
+        /*to preset a list to store the position of each grid, and when the mouse click the screen, then compare to each grid and find the nearest
         grid at the selected grid, and then put a plant on this position
          */
-        private readonly Vector2 gridSize = new Vector2(1.4f, 1.65f);
-        private readonly Vector2 firstGridPosition = new Vector2(-7f, -3.75f);
+        
         // private readonly List<LogicGrid> gridsPos = new List<LogicGrid>();
-        private Dictionary<int, List<LogicGrid>> allGridsDic = new Dictionary<int, List<LogicGrid>>();
+        private readonly Dictionary<int, List<LogicGrid>> allGridsDic = new Dictionary<int, List<LogicGrid>>();
         private readonly int rowCount = 5;
         private readonly int colCount = 9;
         private void Start()
@@ -96,7 +71,7 @@ namespace Managers
                     grid.IsPlanted = false;
                     grid.Plant = null;
                     grid.RowIndex = row;
-                    grid.PointWorldPos = new Vector2(firstGridPosition.x + (col * gridSize.x), firstGridPosition.y + (row * gridSize.y));
+                    grid.PointWorldPos = new Vector2(GridConfig.firstGridPosition.x + (col * GridConfig.gridSize.x), GridConfig.firstGridPosition.y + (row * GridConfig.gridSize.y));
                     // gridsPos.Add(grid);
                     allGridsDic[row].Add(grid);
                 }

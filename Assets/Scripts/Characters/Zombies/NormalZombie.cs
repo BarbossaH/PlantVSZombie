@@ -25,7 +25,7 @@ namespace Characters.Zombies
         {
             base.Start();
             PlayAnimationRandomly();
-            MaxHealth = 15;
+            MaxHealth = 10;
             CurrentHealth = MaxHealth;
             IsAttacking = false;
         }

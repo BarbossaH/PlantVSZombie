@@ -50,7 +50,8 @@ namespace Characters.Zombies
             foreach (var trigger in triggers)
             {
                 // Debug.Log(trigger.TriggerId);
-
+                
+                //to check the corresponding trigger suitable
                 if (trigger.CheckTrigger(fsm))
                 {
                     EnemyStateIdEnum stateId = map[trigger.TriggerId];

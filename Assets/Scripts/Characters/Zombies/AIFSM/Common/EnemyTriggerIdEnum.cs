@@ -2,9 +2,9 @@ namespace Characters.Zombies
 {
     public enum EnemyTriggerIdEnum
     {
+        LowHealthAttack,
+        LowHealthWalk,
         NoHealth,
-        EnableAttacking,
-        Spawn,
         Attack,
         Walk
     }

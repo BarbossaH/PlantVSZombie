@@ -34,7 +34,7 @@ namespace Characters.Bullets
                 rb.velocity = Vector2.zero;
                 rb.gravityScale = 1;
                 DestroyBullet();
-                other.gameObject.GetComponent<ZombieBase>().TakeDamaged(3.0f);
+                other.gameObject.GetComponent<ZombieBase>().TakeDamaged(1.0f);
             }
         }
 

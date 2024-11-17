@@ -14,7 +14,6 @@ namespace Characters.Zombies
         {
             base.EnterState(fsm);
             fsm.zombie.SetWalkSpeed(0.0f);
-            // Debug.Log("attack");
             fsm.anim.SetBool(ZombieAnimationParams.Attack, true);
         }
 
@@ -22,6 +21,7 @@ namespace Characters.Zombies
         {
             base.ExitState(fsm);
             // fsm.zombie.SetSpeed(1.0f);
+            //I don't need to set attack animation as false, otherwise it will return to walk state
             fsm.anim.SetBool(ZombieAnimationParams.Attack, false);
         }
 

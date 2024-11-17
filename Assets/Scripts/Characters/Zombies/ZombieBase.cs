@@ -3,6 +3,7 @@
 using System;
 using Characters.Attributes;
 using Interfaces;
+using Managers;
 using UnityEngine;
 namespace Characters.Zombies
 {
@@ -14,7 +15,11 @@ namespace Characters.Zombies
         protected Animator anim;
 
         private float walkSpeed;
-
+        public float MaxHealth { get; set; }
+        public float CurrentHealth { get; set; }
+        public bool IsLowHealth { get; private set; }
+        private bool headLost;
+        public bool IsAttacking { get;protected set; }
         protected virtual void Awake()
         {
             anim = GetComponent<Animator>();
@@ -28,6 +33,16 @@ namespace Characters.Zombies
         public void TakeDamaged(float damage)
         {
             CurrentHealth -= damage;
+            if (CurrentHealth / MaxHealth < 0.3f)
+            {
+                Debug.Log("Low Health");
+                if (!headLost)
+                {
+                    ZombieManager.Instance.GenerateHead(transform);
+                    headLost = true;
+                }
+                IsLowHealth = true;
+            }
             if (CurrentHealth <= 0)
             {
                 CurrentHealth = 0;
@@ -49,10 +64,7 @@ namespace Characters.Zombies
             Destroy(gameObject);
         }
         
-        public float MaxHealth { get; set; }
-        public float CurrentHealth { get; set; }
-
-        public bool IsAttacking { get;protected set; }
+  
         //for test
         public void SetWalkSpeed()
         {
