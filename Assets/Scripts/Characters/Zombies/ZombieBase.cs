@@ -35,7 +35,7 @@ namespace Characters.Zombies
             CurrentHealth -= damage;
             if (CurrentHealth / MaxHealth < 0.3f)
             {
-                Debug.Log("Low Health");
+                // Debug.Log("Low Health");
                 if (!headLost)
                 {
                     ZombieManager.Instance.GenerateHead(transform);

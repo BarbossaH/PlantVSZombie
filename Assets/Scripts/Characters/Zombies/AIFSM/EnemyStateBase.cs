@@ -27,6 +27,7 @@ namespace Characters.Zombies
             // triggers.Add(triggerId);
             CreateTrigger(triggerId);
         }
+        //using reflection to add new trigger, but I have to follow the naming convention, particularly noticing the namespace
         private void CreateTrigger(EnemyTriggerIdEnum triggerId)
         {
             Type triggerBase = Type.GetType("Characters.Zombies." + triggerId + "Trigger");
