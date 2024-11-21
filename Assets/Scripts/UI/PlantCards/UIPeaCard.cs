@@ -10,13 +10,13 @@ namespace UI
         public override float CoolDown { get; protected set; }= 5.0f;
 
 
-        public override PlantTypeEnum CurrentPlantType { get; protected set; }
+        public override PoolTypeEnum CurrentPlantType { get; protected set; }
 
 
         protected override void Start()
         {
             base.Start();
-            CurrentPlantType = PlantTypeEnum.Pea;
+            CurrentPlantType = PoolTypeEnum.PeaShooter;
             sunAmountTMP.text = ((int)CurrentPlantType).ToString();
         }
    }

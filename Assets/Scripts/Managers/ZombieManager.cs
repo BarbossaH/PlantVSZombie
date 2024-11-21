@@ -1,7 +1,7 @@
-using System;
 using System.Collections;
+using System.Collections.Generic;
+using Characters.Zombies;
 using Conf;
-using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -10,25 +10,16 @@ namespace Managers
     public class ZombieManager:SingletonMono<ZombieManager>
     {
         //this class is responsible for create zombies and zombie heads
-        private Zombie_SO zombieSo;
+        // private Zombie_SO zombieSo;
         private Transform zombieParent;
         private int randomRow;
-        protected override void Init()
-        {
-            base.Init();
-            //actually, it should be loaded at first after initiating the game
-            zombieSo = Resources.Load<Zombie_SO>("Zombie_SO");
-           // zombieParent=GameObject.Find("")
-        }
+        
+        private readonly List<GameObject> zombies = new List<GameObject>();
 
-        private void Start()
+        public bool IsZombieCleanUp()
         {
-            for (int i = 0; i < 15; i++)
-            {
-                GenerateBody(i);
-            }
+            return zombies.Count <= 0;
         }
-
         private Vector3 GetRandomPosition()
         {
             randomRow = Random.Range(0, 5);
@@ -41,18 +32,46 @@ namespace Managers
             StartCoroutine(HeadDropping(parent.position,transform));
         }
 
-        public void GenerateBody(int index)
+        public void GenerateZombies(int amount)
+        {
+            for (int i = 0; i < amount; i++)
+            {
+                GenerateZombie(i);
+            }
+        }
+
+        public void StartInvasion()
+        {
+            for (int i = 0; i < zombies.Count; i++)
+            {
+                zombies[i].GetComponent<ZombieBase>().StartInvasion = true;
+            }
+        }
+        private void GenerateZombie(int index)
         {
             // Debug.Log(sortingOrder);
-            GameObject zombie=GameObject.Instantiate(zombieSo.zombieDataList[0].zombiePrefab,GetRandomPosition(),Quaternion.identity,transform);
-            
+            // GameObject zombie=GameObject.Instantiate(zombieSo.zombieDataList[0].zombiePrefab,GetRandomPosition(),Quaternion.identity,transform);
+           
+            //there is a potential issue that the type of zombie should be multiple, but here just one type. I think here I should read the configuration files to get the right types
+            GameObject zombie = ObjectPoolManager.Instance.GetObject(PoolTypeEnum.NormalZombie, GetRandomPosition(),
+                Quaternion.identity);   
+            zombies.Add(zombie);
             zombie.GetComponent<SpriteRenderer>().sortingOrder = (4-randomRow*100)+index;
         }
         private IEnumerator HeadDropping(Vector3 position,Transform parent)
         {
-            GameObject head = GameObject.Instantiate(zombieSo.zombieHead,position,Quaternion.identity,parent);
+            // GameObject head = GameObject.Instantiate(zombieSo.zombieHead,position,Quaternion.identity,parent);
+            GameObject head =
+                ObjectPoolManager.Instance.GetObject(PoolTypeEnum.ZombieHead, position, Quaternion.identity);
             yield return new WaitForSeconds(1.0f);
-            Destroy(head);
+            // Destroy(head);
+            ObjectPoolManager.Instance.ReturnObject(PoolTypeEnum.ZombieHead,head);
+        }
+
+        public void ReturnZombieToPool(GameObject zombie,PoolTypeEnum poolType)
+        {
+            zombies.Remove(zombie);
+            ObjectPoolManager.Instance.ReturnObject(poolType, zombie);
         }
     }
 }

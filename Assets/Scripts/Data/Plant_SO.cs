@@ -12,6 +12,6 @@ public class PlantListSO : ScriptableObject
 [Serializable]
 public class PlantData
 {
-    public PlantTypeEnum PlantType;
+    public PoolTypeEnum PlantType;
     public GameObject PlantPrefab;
 }

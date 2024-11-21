@@ -7,6 +7,11 @@ namespace Characters.Plant
 {
    public class Peashooter : PlantBase
     {
+        public override void Die()
+        {
+            
+        }
+
         public override float MaxHealth { get; set; }
         public override float CurrentHealth { get; set; }
         public override float CdDuration { get; set; }
@@ -80,7 +85,7 @@ namespace Characters.Plant
             while (true)
             {
                 yield return new WaitForSeconds(2f);
-                GameObject bulletPrefab = PlantManager.Instance.GetBulletPrefabByType(BulletTypeEnum.PeaBullet);
+                GameObject bulletPrefab = PlantManager.Instance.GetBulletPrefabByType(PoolTypeEnum.PeaBullet);
                 // Debug.Log(bulletPrefab);
                 GameObject bullet = GameObject.Instantiate(bulletPrefab, gun.position, Quaternion.identity);
             }

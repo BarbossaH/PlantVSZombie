@@ -1,5 +1,6 @@
 
 using Characters.Plant;
+using Conf;
 using UnityEngine;
 using Managers;
 using Grid;
@@ -16,6 +17,8 @@ namespace Characters.Zombies
         private LogicGrid currentGrid;
         private GameObject currentPlant;
         private Rigidbody2D rb;
+        public override PoolTypeEnum PoolType { get;protected set; }
+
         protected override void Awake()
         {
             base.Awake();
@@ -24,15 +27,16 @@ namespace Characters.Zombies
         protected override void Start()
         {
             base.Start();
-            PlayAnimationRandomly();
             MaxHealth = 10;
             CurrentHealth = MaxHealth;
             IsAttacking = false;
+            PoolType= PoolTypeEnum.NormalZombie;
+            PlayAnimationRandomly();
         }
 
         private void FixedUpdate()
         {
-            if (CurrentHealth > 0)
+            if (CurrentHealth > 0 && StartInvasion)
             {
                 Move();
             }
@@ -41,6 +45,16 @@ namespace Characters.Zombies
 
         private void Update()
         {
+            if (!StartInvasion)
+            {
+                anim.enabled=false;
+            }
+            else
+            {
+                anim.enabled=true;
+
+                // PlayAnimationRandomly();
+            }
             CheckCanAttack();
         }
 
@@ -114,7 +128,13 @@ namespace Characters.Zombies
             rb.MovePosition(transform.position + new Vector3(-speedX * Time.fixedDeltaTime, 0, 0));
             // transform.Translate(new Vector3(-speedX * Time.fixedDeltaTime, 0, 0));
         }
-        
+
+        protected override void Die()
+        {
+            base.Die();
+            StartInvasion = false;
+            ZombieManager.Instance.ReturnZombieToPool(gameObject, PoolType);
+        }
     }
 
 }

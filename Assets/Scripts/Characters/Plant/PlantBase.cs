@@ -76,10 +76,8 @@ namespace Characters.Plant
             currentCoroutine= StartCoroutine(ChangeColorRoutine(0.5f, new Color(1f, 0.3f, 0.2f)));
         }
 
-        public void Die()
-        {
-           Destroy(gameObject);
-        }
+        public abstract void Die();
+     
 
         void PlantAttack()
         {

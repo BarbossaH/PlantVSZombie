@@ -11,6 +11,7 @@ namespace Managers
 
         //private GameObject plantInGrid;
         private LogicGrid currentGrid;
+        private string typename;
 
         //get the right grid from grid manager ( grid is not null and not planted ),preview the plant
         private void Update()
@@ -62,7 +63,7 @@ namespace Managers
 
         private void SetCurrentGrid()
         {
-            if (MouseManager.Instance.currentPlantType == PlantTypeEnum.None) return;
+            if (MouseManager.Instance.currentPlantType == PoolTypeEnum.None) return;
             LogicGrid grid = GridManager.Instance.GetGridByMouse();
             if (grid != null)
             {
@@ -89,15 +90,16 @@ namespace Managers
                 //show the preview of the plant in the grid
                 if (currentGrid.Plant is null)
                 {
-                    GameObject prefab =
-                        PlantManager.Instance.GetPlantPrefabByType(MouseManager.Instance.currentPlantType);
-                    if (prefab is not null)
-                    {
-                        currentGrid.Plant = GameObject.Instantiate(prefab, currentGrid.PointWorldPos,
-                            Quaternion.identity, PlantManager.Instance.transform);
-                        currentGrid.Plant.GetComponent<PlantBase>().ShowPlant(0.6f);
-                        currentGrid.Plant.GetComponent<SpriteRenderer>().sortingOrder = 0;
-                    }
+                    // GameObject prefab =
+                        // PlantManager.Instance.GetPlantPrefabByType(MouseManager.Instance.currentPlantType);
+                    
+        
+                    // currentGrid.Plant = GameObject.Instantiate(prefab, currentGrid.PointWorldPos,
+                    //     Quaternion.identity, PlantManager.Instance.transform);
+                    currentGrid.Plant = ObjectPoolManager.Instance.GetObject(MouseManager.Instance.currentPlantType, currentGrid.PointWorldPos,
+                        Quaternion.identity);
+                    currentGrid.Plant.GetComponent<PlantBase>().ShowPlant(0.6f);
+                    currentGrid.Plant.GetComponent<SpriteRenderer>().sortingOrder = 0;
                 }
             }
         }
@@ -107,8 +109,10 @@ namespace Managers
             // if (currentGrid != null && !currentGrid.IsPlanted)
             if(currentGrid is {IsPlanted: false})
             {
-                Destroy(currentGrid.Plant);
+                // Destroy(currentGrid.Plant);
+                ObjectPoolManager.Instance.ReturnObject(MouseManager.Instance.currentPlantType, currentGrid.Plant.gameObject);
                 currentGrid.Plant = null;
+                
             }
         }
 

@@ -1,14 +1,24 @@
 
+using System;
 using Characters.Zombies;
 using Managers;
 using UnityEngine;
 
 public class Test : MonoBehaviour
 {
-    public ZombieBase zombie;
-    
+    private Camera playerCamera;
+
+    private void Start()
+    {
+        playerCamera=Camera.main;
+    }
+
+    private void Callback()
+    {
+        Debug.Log("callback is called");
+    }
     public void OnMouseDown()
     {
-        GridManager.Instance.ClearAllPlant();
+        // playerCamera.GetComponent<CameraController.CameraController>().MoveCamera(Callback);
     }
 }

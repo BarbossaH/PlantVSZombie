@@ -12,7 +12,7 @@ public class Bullet_SO: ScriptableObject
 [Serializable]
 public class BulletData
 {
-    public BulletTypeEnum ButtetType;
+    public PoolTypeEnum ButtetType;
     public GameObject BulletPrefab;
     public Sprite BulletHitSprite;
 }

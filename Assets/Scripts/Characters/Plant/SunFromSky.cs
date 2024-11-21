@@ -14,9 +14,11 @@ namespace Characters.Plant
         private readonly float sunLandPosMinY = -3.5f;
         private readonly float sunLandPosMaxY = 3f;
 
+        [SerializeField] private float frequency = 5;
+
         private void Start()
         {
-            InvokeRepeating(nameof(CreateSun), 2, 2);
+            InvokeRepeating(nameof(CreateSun), frequency, frequency);
 
         }
 
@@ -27,10 +29,12 @@ namespace Characters.Plant
 
         private void CreateSun(SunTypeEnum sunType = SunTypeEnum.Normal)
         {
-            GameObject prefab = SunManager.Instance.GetSunPrefabByType(sunType);
-            // Debug.Log(prefab);
-            Sun sun = GameObject.Instantiate(prefab, Vector3.zero,
-                Quaternion.identity, SunManager.Instance.transform).GetComponent<Sun>();
+            // GameObject prefab = SunManager.Instance.GetSunPrefabByType(sunType);
+            // // Debug.Log(prefab);
+            // Sun sun = GameObject.Instantiate(prefab, Vector3.zero,
+            //     Quaternion.identity, SunManager.Instance.transform).GetComponent<Sun>();
+            Sun sun = ObjectPoolManager.Instance.GetObject(PoolTypeEnum.Sun, Vector3.zero, Quaternion.identity)
+                .GetComponent<Sun>();
             float landingPosY = Random.Range(sunLandPosMinY, sunLandPosMaxY);
             float spawnSunPosX = Random.Range(spawnSunPosMinX, spawnSunPosMaxX);
             sun.InitPosForSky(landingPosY, spawnSunPosX, spawnSunPosY);

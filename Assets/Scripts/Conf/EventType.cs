@@ -6,5 +6,6 @@ namespace Conf
         PlantingEvent = 0,
         UpdateSumAmount,
         ZombieDetected,
+        ZombieInvasion
     }
 }

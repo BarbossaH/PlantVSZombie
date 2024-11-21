@@ -1,21 +1,30 @@
 using Conf;
+using System.Collections;
+using UnityEngine;
+using Managers;
+using UI;
+using Random = UnityEngine.Random;
 
 namespace Characters.Plant
 {
-
-    using System.Collections;
-    using UnityEngine;
-    using Managers;
+    //in real project, I believe this sun should have a base class, because there are many different kinds of suns that have different attributes and functionalities. But in this project, I just simplified it. 
     public class Sun : MonoBehaviour
     {
-        [SerializeField] private float fallingSpeed = 5.0f;
-        [SerializeField] private float jumpUpSpeed = 10.0f;
-        [SerializeField] private float jumpDownSpeed = -2.5f;
-        [SerializeField] private float flyingSpeed = 10f;
+        [SerializeField] private float fallingSpeed;
+        [SerializeField] private float jumpUpSpeed;
+        [SerializeField] private float jumpDownSpeed;
+        [SerializeField] private float flyingSpeed;
         private float landingPosY;
         private Coroutine countdownCoroutine;
+       private Camera cameraMain;
+       private Vector3 localPosition;
+       private void Awake()
+       {
+           cameraMain = Camera.main;
+           localPosition = transform.position;
+       }
 
-        private void OnMouseDown()
+       private void OnMouseDown()
         {
             //actually I believe we should destroy the clicked sun and create a new one, create a new one first, then destroy the old one
             //TODO: generate a new one and destroy the clicked one
@@ -49,11 +58,10 @@ namespace Characters.Plant
             while (transform.position.y > landingPosY)
             {
                 transform.Translate(fallingSpeed *  Time.deltaTime*Vector3.down);
-                yield return new WaitForSeconds(0.005f);
+                yield return null;
             }
 
             countdownCoroutine = StartCoroutine(DestroyCountDown(5f));
-
         }
 
         public void JumpAnimationFromFlower()
@@ -82,7 +90,7 @@ namespace Characters.Plant
 
                 transform.Translate(new Vector3(speedX * Time.deltaTime, speedY * Time.deltaTime, 0));
 
-                yield return new WaitForSeconds(0.005f);
+                yield return null;
 
             }
 
@@ -91,7 +99,10 @@ namespace Characters.Plant
 
         private void DestroySelf()
         {
-            Destroy(gameObject);
+            // Destroy(gameObject);
+            StopAllCoroutines();
+            transform.position = localPosition;
+            ObjectPoolManager.Instance.ReturnObject(PoolTypeEnum.Sun,gameObject);
         }
 
         private void SunCollectedAnim(Vector3 destinationPos)
@@ -102,7 +113,6 @@ namespace Characters.Plant
         private IEnumerator SunFlying(Vector3 destinationPos)
         {
             //get the direction of destination
-            var cameraMain = Camera.main;
             if (cameraMain is null) yield break; 
             Vector3 screenStartPos = cameraMain.WorldToScreenPoint(transform.position);
 
@@ -111,7 +121,7 @@ namespace Characters.Plant
 
             while (Vector3.Distance(destinationPos, screenStartPos) > 0.1f)
             {
-                yield return new WaitForSeconds(0.005f);
+                yield return null;
                 screenStartPos = Vector3.MoveTowards(screenStartPos, destinationPos, flyingSpeed);
 
                 transform.position = cameraMain.ScreenToWorldPoint(screenStartPos);

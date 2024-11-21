@@ -1,3 +1,116 @@
 /Library
 /Logs
 /Temp
+# =============== #
+# Unity Generated #
+# =============== #
+
+# Ignore the auto-generated library folder (local cache of imported assets).
+[Ll]ibrary/
+
+# Ignore build results.
+[Bb]uild/
+[Bb]uilds/
+
+# Ignore temp files.
+[Tt]emp/
+
+# Ignore log files and crash reports.
+[Ll]ogs/
+*.log
+
+# Ignore auto-generated files from local cache.
+[Oo]bj/
+
+# Ignore cache directories for various platforms.
+.gradle/
+*.gradle
+
+# Unity cache folder (e.g., GI cache)
+[Uu]ser[Ss]ettings/
+
+# Ignore auto-generated metadata files.
+[Mm]etadata/
+
+# Crash dumps and system reports.
+*.pidb
+*.suo
+*.user
+*.userprefs
+*.csproj
+*.unityproj
+*.vcxproj
+*.hmap
+
+# Ignore Android/Gradle specific files.
+.gradle/
+ExportedObj/
+.consulo/
+.gradle/
+.idea/
+.vscode/
+
+# =============== #
+# Operating System #
+# =============== #
+
+# macOS-specific files.
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows-specific files.
+Thumbs.db
+Desktop.ini
+
+# Linux-specific files.
+*.swp
+*.swo
+*~
+
+# =============== #
+# Version Control  #
+# =============== #
+
+# Ignore temporary or conflict resolution files.
+*.bak
+*.tmp
+*.orig
+*.merge
+
+# Ignore files for version control GUIs.
+*.seed
+*.ids
+.git/
+
+# =============== #
+# Unity Collab     #
+# =============== #
+
+# Ignore Unity Collaborate generated files.
+[Uu]ser[Ss]ettings/[Cc]ollab/
+
+# =============== #
+# Additional Tools #
+# =============== #
+
+# Ignore Rider and JetBrains project files.
+.idea/
+*.iml
+
+# Ignore Visual Studio project files.
+.vscode/
+.vs/
+
+# Ignore external plugins.
+Plugins/*/*/meta
+Assets/Plugins/*/meta
+
+# =============== #
+# Environment-Specific #
+# =============== #
+
+# Ignore files that are environment-specific.
+*.stackdump
+.env
+*.log.*

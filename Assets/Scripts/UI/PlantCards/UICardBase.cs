@@ -19,7 +19,7 @@ namespace UI
       protected TextMeshProUGUI sunAmountTMP;
 
       public abstract float CoolDown { get; protected set; }
-      public abstract PlantTypeEnum CurrentPlantType { get; protected set; }
+      public abstract PoolTypeEnum CurrentPlantType { get; protected set; }
       private bool IsReady
       {
          get => isReady;
@@ -108,7 +108,7 @@ namespace UI
       {
          //if cd is not ready, or the mouse has held a plant, or the sum amount is not enough,then return
          if (!IsReady 
-             || MouseManager.Instance.currentPlantType != PlantTypeEnum.None
+             || MouseManager.Instance.currentPlantType != PoolTypeEnum.None
              || !IsSunEnough()) return;
          //change the state of mouse manager
          MouseManager.Instance.SetMouseSelected(CurrentPlantType);
@@ -117,7 +117,7 @@ namespace UI
       public void OnDataChanged(EventTypeEnum type, object eventData = null)
       {
          //todo refresh the card cd
-         if (type == EventTypeEnum.PlantingEvent && eventData!=null && (PlantTypeEnum)eventData == CurrentPlantType)
+         if (type == EventTypeEnum.PlantingEvent && eventData!=null && (PoolTypeEnum)eventData == CurrentPlantType)
          {
             IsReady = false;
          }

@@ -2,12 +2,13 @@
 
 using System;
 using Characters.Attributes;
+using Conf;
 using Interfaces;
 using Managers;
 using UnityEngine;
 namespace Characters.Zombies
 {
-    public class ZombieBase : MonoBehaviour,IDamageable
+    public abstract class ZombieBase : MonoBehaviour
     {
         [SerializeField] protected float speedX;
         [SerializeField] protected float attackRange;
@@ -20,6 +21,9 @@ namespace Characters.Zombies
         public bool IsLowHealth { get; private set; }
         private bool headLost;
         public bool IsAttacking { get;protected set; }
+        
+        public bool StartInvasion { get; set; }
+        public abstract PoolTypeEnum PoolType { get; protected set; }
         protected virtual void Awake()
         {
             anim = GetComponent<Animator>();
@@ -50,21 +54,13 @@ namespace Characters.Zombies
             }
         }
         public virtual void AttackPlant(){}
-        public void Die()
+        protected virtual void Die()
         {
             // Debug.Log("play death animation");
            anim.SetTrigger(ZombieAnimationParams.Die);
            gameObject.layer = LayerMask.NameToLayer("Ignore Raycast");   
         }
         
-        private void DestroyGameObject()
-        { 
-            //immediately destroy game object looks like a little bad, delay 0.5f second could be better
-            //but, I won't do this. lol
-            Destroy(gameObject);
-        }
-        
-  
         //for test
         public void SetWalkSpeed()
         {

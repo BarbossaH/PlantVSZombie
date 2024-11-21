@@ -17,21 +17,18 @@ namespace Managers
         private readonly Dictionary<int, List<LogicGrid>> allGridsDic = new Dictionary<int, List<LogicGrid>>();
         private readonly int rowCount = 5;
         private readonly int colCount = 9;
+        private Camera mainCamera;
+
         private void Start()
         {
+            mainCamera=Camera.main;
             GenerateGridPos();
         }
-
-        // private void FixedUpdate()
-        // {
-        //     // DetectZombieFixedUpdate();
-        // }
-
 
         public LogicGrid GetGridByMouse()
         {
             Vector2 mousePos = Input.mousePosition;
-            Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
+            Vector3 worldPos = mainCamera.ScreenToWorldPoint(mousePos);
             LogicGrid grid = GetGridByWorldCoordinate(worldPos);
             return grid;
         }

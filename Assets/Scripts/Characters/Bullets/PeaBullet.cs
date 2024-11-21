@@ -30,7 +30,7 @@ namespace Characters.Bullets
         {
             if (other.gameObject.layer==LayerConstants.ZombieLayer)
             {
-                spriteRenderer.sprite = PlantManager.Instance.GetBulletHitSpriteByType(BulletTypeEnum.PeaBullet);
+                spriteRenderer.sprite = PlantManager.Instance.GetBulletHitSpriteByType(PoolTypeEnum.PeaBullet);
                 rb.velocity = Vector2.zero;
                 rb.gravityScale = 1;
                 DestroyBullet();

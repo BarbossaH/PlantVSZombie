@@ -121,8 +121,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fallingSpeed: 5
-  jumpUpSpeed: 10
-  jumpDownSpeed: -5
+  jumpUpSpeed: 5
+  jumpDownSpeed: -2.5
   flyingSpeed: 20
 --- !u!58 &3471388002100020133
 CircleCollider2D:

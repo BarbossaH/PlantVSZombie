@@ -8,9 +8,9 @@ namespace Managers
     public class PlantManager : SingletonMono<PlantManager>
     {
         //this class is for managing the data of all plants, via this class, I can get any plants I want due to the plant type
-        private readonly Dictionary<PlantTypeEnum, GameObject> plantDic = new Dictionary<PlantTypeEnum, GameObject>();
-        private readonly Dictionary<BulletTypeEnum, GameObject> bulletDic = new Dictionary<BulletTypeEnum, GameObject>();
-        private readonly Dictionary<BulletTypeEnum, Sprite> bulletHitDic = new Dictionary<BulletTypeEnum, Sprite>();
+        private readonly Dictionary<PoolTypeEnum, GameObject> plantDic = new Dictionary<PoolTypeEnum, GameObject>();
+        private readonly Dictionary<PoolTypeEnum, GameObject> bulletDic = new Dictionary<PoolTypeEnum, GameObject>();
+        private readonly Dictionary<PoolTypeEnum, Sprite> bulletHitDic = new Dictionary<PoolTypeEnum, Sprite>();
         protected override void Init()
         {
             PlantListSO plantListSO = Resources.Load<PlantListSO>("PlantListSO");
@@ -36,19 +36,19 @@ namespace Managers
             }
         }
 
-        public GameObject GetPlantPrefabByType(PlantTypeEnum plantType)
+        public GameObject GetPlantPrefabByType(PoolTypeEnum plantType)
         {
             plantDic.TryGetValue(plantType, out GameObject plant);
             // if (plantDic.ContainsKey(plantType)) return plantDic[plantType];
             return plant;
         }
 
-        public GameObject GetBulletPrefabByType(BulletTypeEnum bulletType)
+        public GameObject GetBulletPrefabByType(PoolTypeEnum bulletType)
         {
             bulletDic.TryGetValue(bulletType, out GameObject bullet);
             return bullet;
         }
-        public Sprite GetBulletHitSpriteByType(BulletTypeEnum bulletType)
+        public Sprite GetBulletHitSpriteByType(PoolTypeEnum bulletType)
         {
             bulletHitDic.TryGetValue(bulletType, out Sprite bullet);
             return bullet;

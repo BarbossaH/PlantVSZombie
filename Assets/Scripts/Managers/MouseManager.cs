@@ -5,34 +5,30 @@ namespace Managers
 
     public class MouseManager : SingletonMono<MouseManager>
     {
-        public PlantTypeEnum currentPlantType;
+        public PoolTypeEnum currentPlantType;
 
         private GameObject plantFMouse;
 
         //check mouse if selected or not
-
+        private Camera mainCamera;
         private bool IsSelected { get; set; }
-
-        public void SetMouseSelected(PlantTypeEnum plantType)
+        public void SetMouseSelected(PoolTypeEnum plantType)
         {
             IsSelected = true;
-            GameObject currentPrefab = PlantManager.Instance.GetPlantPrefabByType(plantType);
-            if (currentPrefab != null)
+   
+
+            if (plantType != PoolTypeEnum.None)
             {
-                plantFMouse = GameObject.Instantiate(currentPrefab, Vector3.zero, Quaternion.identity,
-                    GridManager.Instance.transform);
+                plantFMouse = ObjectPoolManager.Instance.GetObject(plantType, Vector3.zero, Quaternion.identity);
                 plantFMouse.GetComponent<SpriteRenderer>().sortingOrder = 2;
                 currentPlantType = plantType;
-            }
-            else
-            {
-                Debug.LogError("Cannot get the prefab. ");
             }
         }
 
         private void Start()
         {
-            currentPlantType = PlantTypeEnum.None;
+            mainCamera= Camera.main;
+            currentPlantType = PoolTypeEnum.None;
         }
 
         private void Update()
@@ -54,14 +50,15 @@ namespace Managers
         {
             // Debug.Log("what");
             IsSelected = false;
-            Destroy(plantFMouse);
+            // Destroy(plantFMouse);
+            ObjectPoolManager.Instance.ReturnObject(currentPlantType, plantFMouse);
             plantFMouse = null;
-            currentPlantType = PlantTypeEnum.None;
+            currentPlantType = PoolTypeEnum.None;
         }
 
         private void SetPlantFollowMouse()
         {
-            Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 mouseWorldPos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
             mouseWorldPos.z = 0;
             plantFMouse.transform.position = mouseWorldPos;
         }

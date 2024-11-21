@@ -7,13 +7,13 @@ namespace UI
     {
 
         public override float CoolDown { get; protected set; } = 3.0f;
-        public override PlantTypeEnum CurrentPlantType { get; protected set; }
+        public override PoolTypeEnum CurrentPlantType { get; protected set; }
         // [SerializeField] private PlantTypeEnum currentPlantType;
         
         protected override void Start()
         {
             base.Start();
-            CurrentPlantType=PlantTypeEnum.SunFlower;
+            CurrentPlantType=PoolTypeEnum.Sunflower;
             sunAmountTMP.text = ((int)CurrentPlantType).ToString();
 
         }

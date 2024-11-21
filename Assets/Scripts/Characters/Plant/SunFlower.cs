@@ -1,11 +1,9 @@
-using System.Collections;
 
+using Conf;
+using UnityEngine;
+using Managers;
 namespace Characters.Plant
 {
-    using UnityEngine;
-    using Managers;
-    using Conf;
-    
     public class SunFlower : PlantBase
     {
         //this script is for creating sun from sunflower, like sky sun manager script
@@ -18,7 +16,9 @@ namespace Characters.Plant
         public override float MaxHealth { get; set; }
         public override float CurrentHealth { get; set; }
         public override float CdDuration { get; set; }
-
+        private float currentTime ;
+        private bool isPlanted;
+        private Coroutine createSunRoutine;
         protected override void Awake()
         {
             base.Awake();
@@ -27,35 +27,47 @@ namespace Characters.Plant
             CdDuration = 2f;
         }
 
-        public override void ActivatePlantFunction()
+        private void Update()
         {
-            // InvokeRepeating(nameof(CreateSun), CdDuration, CdDuration);
-            StartCoroutine(SunCreateCoroutine());
-        }
-        
-
-        private IEnumerator SunCreateCoroutine()
-        {
-            while (true)
+            if (isPlanted)
             {
-                yield return new WaitForSeconds(CdDuration);
-                CreateSun();
+                currentTime += Time.deltaTime;
+                if (currentTime>=CdDuration)
+                {
+                    //create a sun
+                    CreateSun();
+                    currentTime = 0f;
+                }
             }
         }
-        private void CreateSun()
+
+        public override void ActivatePlantFunction()
         {
-            StartCoroutine(ChangeColorRoutine(changeColorDuration,new Color(1.0f, 0.6f, 0),InstantiateSunNormal));
+            isPlanted = true;
         }
         
-        private void InstantiateSunNormal()
+        private void CreateSun()
         {
-            InstantiateSun();
+            if (createSunRoutine != null)
+            {
+                StopCoroutine(createSunRoutine);
+            }
+            createSunRoutine=  StartCoroutine(ChangeColorRoutine(changeColorDuration,new Color(1.0f, 0.6f, 0),InstantiateSun));
         }
-        private void InstantiateSun(SunTypeEnum sunType = SunTypeEnum.Normal)
+ 
+        private void InstantiateSun()
         {
-            Sun sun = GameObject.Instantiate(SunManager.Instance.GetSunPrefabByType(sunType), transform.position,
-                Quaternion.identity, SunManager.Instance.transform).GetComponent<Sun>();
+            // Sun sun = GameObject.Instantiate(SunManager.Instance.GetSunPrefabByType(sunType), transform.position,
+            //     Quaternion.identity, SunManager.Instance.transform).GetComponent<Sun>();
+            Sun sun = ObjectPoolManager.Instance.GetObject(PoolTypeEnum.Sun, transform.position, Quaternion.identity)
+                .GetComponent<Sun>();  
             sun.JumpAnimationFromFlower();
+        }
+
+        public override void Die()
+        {
+            // Debug.Log(123);
+            ObjectPoolManager.Instance.ReturnObject(PoolTypeEnum.Sunflower,gameObject);
         }
     }
 }

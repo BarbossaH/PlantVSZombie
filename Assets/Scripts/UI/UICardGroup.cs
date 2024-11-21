@@ -1,7 +1,7 @@
 using Conf;
 using Interfaces;
 
-namespace Managers
+namespace UI
 {
 
     using TMPro;

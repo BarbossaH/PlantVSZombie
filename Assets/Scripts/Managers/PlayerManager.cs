@@ -1,5 +1,5 @@
 using Conf;
-
+using UI;
 namespace Managers
 {
     public class PlayerManager : SingletonMono<PlayerManager>
